@@ -1,0 +1,85 @@
+.MainHeader{
+    width:100%;
+    padding:0.6rem 0rem 0.3rem 0rem;
+    position: fixed;
+    top: 0;
+    z-index: 99999;
+}
+
+.MainHeader section{
+    width: 90%;
+    margin: 0rem auto 0rem;
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+.MainNav{
+    display: flex;
+    align-items: center;
+    column-gap: 2rem;
+}
+
+.MainNav div{
+    display: flex;
+    column-gap: 1rem;
+}
+
+.NavFamily{
+    text-decoration:none;
+    color:black;
+    font-size:1.3rem;
+    padding: 0rem 0.5rem 0.2rem 0.5rem;
+    position: relative;
+}
+
+.active{
+    color: #6565d1;
+}
+
+.NavFamily::after{
+    position: absolute;
+    content:"";
+    right: 0;
+    left: 0;
+    bottom: 0;
+    height: 0.13rem;
+    background-color: #6565d1;
+    transform: scale(0,1);
+    transition: all 0.5s ease-out;
+}
+
+.NavFamily:hover::after{
+    transform: scale(1,1);
+}
+
+.SearchForm{
+    display: flex;
+    column-gap:1rem;
+    position: relative;
+}
+
+.SuggestionDiv{
+    position: absolute;
+    top: 1.92rem;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border-radius: 0.3rem;
+}
+
+#searchInput{
+    font-size:1rem;
+    padding:0.3rem 0.5rem;
+    border-radius: 0.2rem;
+    outline: none;
+    width: 18rem;
+    border: #6565d1  0.1rem solid;
+}
+
+#SearchBtn{
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: transparent;
+}

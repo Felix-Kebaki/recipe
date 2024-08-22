@@ -1,0 +1,131 @@
+.Footer {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.UpperFooterDiv {
+  width: 90%;
+  margin: 0rem auto 0rem;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0rem 1rem 0rem;
+}
+
+.LogoDivFooter {
+  width: 25%;
+}
+
+.LogoDivFooter img {
+  width: 100%;
+}
+
+.QuickLinksNewsLetterDiv {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  column-gap: 2rem;
+}
+
+.QuickLinksDiv {
+  width: 40%;
+}
+
+.QuickLinksTittle {
+  color: white;
+  font-size: 1.5rem;
+  padding: 1rem 0rem 2rem 0rem;
+}
+
+.ActualLinksFooter p {
+  padding: 0.4rem 0rem 0.2rem 0rem;
+}
+
+.ActualLinksFooter p a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.NewLetterDiv {
+  width: 50%;
+}
+
+.SubscribeInfo {
+  padding: 1rem 0rem 2rem 0rem;
+  color: white;
+  font-size: 1.2rem;
+  max-width: 90%;
+}
+
+.NewLetterDiv input {
+  width: 60%;
+  padding: 0.4rem 0.3rem;
+  outline: none;
+  border: none;
+}
+
+#NewsLetterBtn {
+  padding: 0.4rem 0.3rem;
+  background-color: rgb(101, 101, 209);
+  border: none;
+  color: black;
+  cursor: pointer;
+}
+
+.LowerFooterDiv {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0rem auto 0rem;
+}
+
+.ByWhoFooter {
+  display: flex;
+  justify-content: start;
+  column-gap: 0.5rem;
+  align-items: center;
+}
+
+#DotIcon {
+  color: rgb(101, 101, 209);
+  font-size: 0.7rem;
+}
+
+.BuiltFooter {
+  color: white;
+  font-size: 1rem;
+}
+
+.BuiltFooter a {
+  text-decoration: none;
+  color: white;
+}
+
+.DivWIthIconsPrivacyFooter {
+  display: flex;
+  column-gap: 4rem;
+  align-items: center;
+}
+
+.DivWIthIconsPrivacyFooter div {
+  column-gap: 1rem;
+  display: flex;
+}
+
+.DivWIthIconsPrivacyFooter div #SocialsIcons {
+  color: white;
+  border: 0.1rem white solid;
+  width: 0.8rem;
+  padding: 0.7rem 0.7rem;
+  height: 0.8rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.PrivacyFooter {
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
