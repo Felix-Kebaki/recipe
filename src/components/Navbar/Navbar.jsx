@@ -51,7 +51,7 @@ export function Navbar() {
         <nav className="MainNav">
           <img src={Logo} alt="" />
           <div>
-            <NavLink className="NavFamily" to="/recipe/home" activeclassname="active">
+            <NavLink className="NavFamily" to="/" activeclassname="active">
               Home
             </NavLink>
             <NavLink

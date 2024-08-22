@@ -12,11 +12,11 @@ import { GlobalContextFunction } from './context/GlobalContext.jsx'
 
 const router=createBrowserRouter([
   {
-    path:"/recipe",
+    path:"/",
     element:<App/>,
     children:[
       {
-        path:"/recipe/home",
+        path:"/",
         element:<Home/>
       },
       {
