@@ -51,29 +51,29 @@ export function Navbar() {
         <nav className="MainNav">
           <img src={Logo} alt="" />
           <div>
-            <NavLink className="NavFamily" to="/" activeclassname="active">
+            <NavLink className="NavFamily" to="/recipe" activeclassname="active">
               Home
             </NavLink>
             <NavLink
               className="NavFamily"
-              to="/recipe/about us"
+              to="/about us"
               activeclassname="active"
             >
               About us
             </NavLink>
             <NavLink
               className="NavFamily"
-              to="/recipe/recipes"
+              to="/recipes"
               activeclassname="active"
             >
               Recipes
             </NavLink>
-            <NavLink className="NavFamily" to="/recipe/blog" activeclassname="active">
+            <NavLink className="NavFamily" to="/blog" activeclassname="active">
               Blog
             </NavLink>
             <NavLink
               className="NavFamily"
-              to="/recipe/contact"
+              to="/contact"
               activeclassname="active"
             >
               Contact
