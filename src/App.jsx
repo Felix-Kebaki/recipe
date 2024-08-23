@@ -9,7 +9,12 @@ function App() {
   const [opened, setOpened] = useState(false); 
 
   useEffect(()=>{
-      document.querySelector(".OverflowOnMain").classList.toggle("OverflowOnMainShow");
+    if(opened){
+      document.querySelector(".OverflowOnMain").classList.add("OverflowOnMainShow");
+    }else{
+      document.querySelector(".OverflowOnMain").classList.remove("OverflowOnMainShow");
+    }
+
   },[opened])
 
 
