@@ -25,7 +25,6 @@
   display: flex;
   width: 40%;
   justify-content: space-between;
-  column-gap: 2rem;
 }
 
 .QuickLinksDiv {
@@ -49,7 +48,7 @@
 }
 
 .NewLetterDiv {
-  width: 50%;
+  width: 57%;
 }
 
 .SubscribeInfo {
@@ -60,14 +59,14 @@
 }
 
 .NewLetterDiv input {
-  width: 60%;
+  width: 70%;
   padding: 0.4rem 0.3rem;
   outline: none;
   border: none;
 }
 
 #NewsLetterBtn {
-  padding: 0.4rem 0.3rem;
+  padding: 0.4rem 0.9rem;
   background-color: rgb(101, 101, 209);
   border: none;
   color: black;
@@ -128,4 +127,169 @@
   color: white;
   font-size: 1rem;
   cursor: pointer;
+}
+
+
+@media screen and (max-width: 1515px) {
+  .UpperFooterDiv {
+    width: 97%;
+  }
+  .LowerFooterDiv {
+    width: 97%;
+  }
+}
+
+@media screen and (max-width: 1299px) {
+  .LogoDivFooter {
+    width: 20%;
+  }
+  
+  #NewsLetterBtn {
+    padding: 0.4rem 0.4rem;
+  }
+}
+
+@media screen and (max-width: 1073px) {
+.LogoDivFooter{
+  width: 25%;
+}
+  .QuickLinksNewsLetterDiv {
+    width: 50%;
+  }
+  .QuickLinksDiv {
+    width: 36%;
+  }
+
+  .QuickLinksTittle {
+    font-size: 1.2rem;
+  }
+
+  .SubscribeInfo {
+    font-size: 1.1rem;
+    max-width: 100%;
+  }
+  .NewLetterDiv {
+    width: 61%;
+  }
+
+  .BuiltFooter {
+    font-size: 0.9rem;
+  }
+  .DivWIthIconsPrivacyFooter div #SocialsIcons {
+    width: 0.6rem;
+    padding: 0.5rem 0.5rem;
+    height: 0.6rem;
+  }
+  .PrivacyFooter {
+    color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  
+  
+}
+
+@media screen and (max-width: 796px) {
+  .LogoDivFooter{
+    width: 28%;
+  }
+  .QuickLinksNewsLetterDiv {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 665px) {
+  .LogoDivFooter{
+    width: 33%;
+  }
+  .QuickLinksNewsLetterDiv {
+    width: 65%;
+  }
+  .QuickLinksDiv {
+    width: 33%;
+  }
+
+  .NewLetterDiv {
+    width: 66%;
+  }
+}
+
+@media screen and (max-width: 622px) {
+  .UpperFooterDiv {
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+  .QuickLinksNewsLetterDiv {
+    width: 100%;
+  }
+  .QuickLinksDiv {
+    width: 30%;
+    padding-bottom: 1.4rem;
+  }
+  .QuickLinksTittle {
+    padding: 1rem 0rem 0.4rem 0rem;
+  }
+  .NewLetterDiv {
+    width: 50%;
+  }
+  
+}
+
+@media screen and (max-width: 519px) {
+  .DivWIthIconsPrivacyFooter {
+    column-gap: 1rem;
+  }
+  
+}
+
+@media screen and (max-width: 493px) {
+  .LogoDivFooter {
+    width: 50%;
+  }
+  .QuickLinksNewsLetterDiv {
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-bottom: 1.4rem;
+  }
+  .QuickLinksDiv {
+    width: 30%;
+    padding-bottom: 0rem;
+  }
+  .NewLetterDiv {
+    width: 60%;
+  }
+
+  .LowerFooterDiv {
+    flex-direction: column-reverse;
+    row-gap: 0.5rem;
+  }
+  
+  
+}
+
+@media screen and (max-width: 413px) {
+  .LogoDivFooter {
+    width: 55%;
+  }
+  .NewLetterDiv {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 361px) {
+  .LogoDivFooter {
+    width: 65%;
+  }
+  .QuickLinksDiv {
+    width: 100%;
+  }
+  .NewLetterDiv {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 282px) {
+  .NewLetterDiv {
+    width: 100%;
+  }
 }

@@ -26,4 +26,20 @@
   flex-direction: column;
   justify-content: space-between;
   background-color: rgb(221, 221, 241);
+  position: relative;
+}
+
+.OverflowOnMain{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  backdrop-filter: blur(0.5rem);
+  z-index: 9999;
+  display: none;
+}
+
+.OverflowOnMainShow{
+  display: block;
 }

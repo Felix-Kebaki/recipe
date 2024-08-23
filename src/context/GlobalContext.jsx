@@ -13,25 +13,23 @@ export const GlobalContextFunction = ({ children }) => {
 
   const HandleFormSubmission = (e) => {
     e.preventDefault();
-    console.log("Received!");
+    useEffect(()=>{
+      fetchData()
+    },[searchParams])
   };
 
   const fetchData = async () => {
     const { app_key, app_id } = QueryString;
     try {
       const response = await fetch(
-        `https://api.edamam.com/api/recipes/v2?type=public&q=pizza&app_id=${app_id}&app_key=${app_key}`
+        `https://api.edamam.com/api/recipes/v2?type=public&q=${searchParams}&app_id=${app_id}&app_key=${app_key}`
       );
       const Fetcheddata = await response.json();
-      console.log(Fetcheddata);
     } catch (err) {
       console.log(err.message);
     }
   };
 
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   return (
     <GlobalFetchContext.Provider

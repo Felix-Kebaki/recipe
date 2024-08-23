@@ -15,14 +15,25 @@
 }
 
 .MainNav{
+    width: 100%;
     display: flex;
     align-items: center;
     column-gap: 2rem;
+    justify-content: space-between;
 }
 
-.MainNav div{
+.LinksSearchMenuDivWrapper{
     display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+
+
+.LinksSearchMenuDivWrapper div{
     column-gap: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
 .NavFamily{
@@ -53,19 +64,15 @@
     transform: scale(1,1);
 }
 
+.SearchMenuDivWrapper{
+    display: flex;
+    justify-content: end;
+}
 .SearchForm{
+    width: 100%;
     display: flex;
     column-gap:1rem;
     position: relative;
-}
-
-.SuggestionDiv{
-    position: absolute;
-    top: 1.92rem;
-    width: 100%;
-    height: auto;
-    background-color: black;
-    border-radius: 0.3rem;
 }
 
 #searchInput{
@@ -82,4 +89,175 @@
     font-size: 1.2rem;
     cursor: pointer;
     background-color: transparent;
+}
+
+
+
+.SuggestionDiv{
+    position: absolute;
+    top: 1.92rem;
+    width: 100%;
+    height: auto;
+    background-color: black;
+    border-radius: 0.3rem;
+}
+
+
+.MenuDivWrapper{
+    display: none;
+    z-index: 9999;
+}
+
+.MenuDivWrapper img{
+    width: 3rem;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width:1515px){
+    .MainHeader section{
+        width: 100%;
+    }
+
+    .MainNav img{
+        padding-left: 0.5rem;
+    }
+
+    .LinksSearchMenuDivWrapper{
+        padding-right: 0.5rem;
+    }
+
+    .MenuDivWrapper{
+        padding-right: 0.5rem;
+    }
+}
+
+@media screen and (max-width:1463px){
+    .LinksSearchMenuDivWrapper div{
+        column-gap: 0.5rem;
+    }
+}
+
+@media screen and (max-width:1193px){
+
+    .MainHeader section{
+        position: relative;
+    }
+
+    .LinksSearchMenuDivWrapper{
+        position: absolute;
+        right: 0;
+        width: 40%;
+        top: -0.6rem;
+        min-height: 100dvh;
+        background-color: white;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: start;
+        justify-content: start;
+        padding-top: 4rem;
+        transform: translateX(60rem);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .LinksSearchMenuDivWrapperDisappear{
+        transform: translateX(0rem);
+        transition: all 0.5s ease-in-out;
+    }
+
+    .LinksSearchMenuDivWrapper div{
+        display: flex;
+        flex-direction: column;
+        margin: 0rem 0rem 0rem 1.5rem;
+    }
+    .NavFamily{
+        font-size:1.5rem;
+        padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    }
+    
+    .active{
+        color: #6565d1;
+    }
+
+    .NavFamily:hover::after{
+        transform: scale(0,1);
+    }
+
+    .SearchMenuDivWrapper{
+        padding-bottom: 1rem;
+    }
+    .SearchForm{
+        display: flex;
+        column-gap:1rem;
+        position: relative;
+    }
+
+    .MenuDivWrapper{
+        display: block;
+    }
+    
+}
+
+@media screen and (max-width:966px){
+    .LinksSearchMenuDivWrapper{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:890px){
+    #MainLogoAtNav{
+        width: 13rem;
+    }
+}
+
+@media screen and (max-width:669px){
+    .LinksSearchMenuDivWrapper{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:456px){
+    .LinksSearchMenuDivWrapper{
+        width: 100%;
+    }
+    #MainLogoAtNav{
+        padding-left: 0.3rem;
+        width: 12rem;
+    }
+
+    .LinksSearchMenuDivWrapper{
+        padding-right: 0rem;
+    }
+
+    .MenuDivWrapper{
+        padding-right: 0.3rem;
+    }
+}
+
+@media screen and (max-width:377px){
+
+    #MainLogoAtNav{
+        width: 10rem;
+    }
+    .LinksSearchMenuDivWrapper div{
+        margin: 0rem 0rem 0rem 0.5rem;
+    }
+}
+
+@media screen and (max-width:364px){
+    #searchInput{
+        font-size:1rem;
+        padding:0.3rem 0.5rem;
+        width: 90%;
+    }
+    
+}
+
+@media screen and (max-width:293px){
+    #MainLogoAtNav{
+        width: 10rem;
+    }
+
+    
 }
