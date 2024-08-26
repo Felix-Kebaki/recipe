@@ -1,36 +1,52 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { faUser } from "@fortawesome/free-regular-svg-icons";
 import React, { useEffect, useState, useContext } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/logo.svg";
 import { GlobalFetchContext } from "../../context/GlobalContext";
 import Menu from "../../assets/images/Menu.svg";
 import Closed from "../../assets/images/closeMenu.svg";
 import "./navbar.css";
 
-export function Navbar({opened,setOpened}) {
-  const { searchParams, setSearchParams, HandleFormSubmission } =
-    useContext(GlobalFetchContext);
+export function Navbar({ opened, setOpened }) {
+  const [inputSearch, setInputSearch] = useState("");
+  const { setSearchParams, setLoading } = useContext(GlobalFetchContext);
   const [getScroll, setGetScroll] = useState({
     y: 0,
     PrevY: 0,
   });
+  const navigate = useNavigate();
+
+  const HandleFormSubmission = (e) => {
+    setLoading(true);
+    e.preventDefault();
+    setSearchParams(inputSearch);
+    setInputSearch("");
+    navigate("/recipes");
+    setLoading(false);
+  };
 
   const HandleClickMenu = () => {
     setOpened((currentOpened) => !currentOpened);
-
-    document.querySelector(".LinksSearchMenuDivWrapper").classList.toggle("LinksSearchMenuDivWrapperDisappear")
+    
+    document
+      .querySelector(".LinksSearchMenuDivWrapper")
+      .classList.toggle("LinksSearchMenuDivWrapperDisappear");
   };
-  if(opened){
-    document.body.style.overflow="hidden";
-  }else{
-    document.body.style.overflow="auto";
+  if (opened) {
+    document.body.style.overflow = "hidden";
+  } else {
+    document.body.style.overflow = "auto";
   }
 
-  const HandleClickOfLink=()=>{
-    document.querySelector(".LinksSearchMenuDivWrapper").classList.toggle("LinksSearchMenuDivWrapperDisappear")
+  const HandleClickOfLink = () => {
+    document
+      .querySelector(".LinksSearchMenuDivWrapper")
+      .classList.toggle("LinksSearchMenuDivWrapperDisappear");
     setOpened((currentOpened) => !currentOpened);
-  }
+  };
 
   const HandleNavOnScroll = () => {
     setGetScroll((prev) => {
@@ -67,11 +83,12 @@ export function Navbar({opened,setOpened}) {
     <header className="MainHeader">
       <section>
         <nav className="MainNav">
+          <div className="ImageLinksInputNav">
           <img src={Logo} alt="SimpleRecipes" id="MainLogoAtNav" />
           <div className="LinksSearchMenuDivWrapper">
             <div>
               <NavLink
-              onClick={HandleClickOfLink}
+                onClick={HandleClickOfLink}
                 className="NavFamily"
                 to="/recipe"
                 activeclassname="active"
@@ -79,7 +96,7 @@ export function Navbar({opened,setOpened}) {
                 Home
               </NavLink>
               <NavLink
-              onClick={HandleClickOfLink}
+                onClick={HandleClickOfLink}
                 className="NavFamily"
                 to="/about us"
                 activeclassname="active"
@@ -105,6 +122,14 @@ export function Navbar({opened,setOpened}) {
               <NavLink
                 onClick={HandleClickOfLink}
                 className="NavFamily"
+                to="/shop"
+                activeclassname="active"
+              >
+                Shop
+              </NavLink>
+              <NavLink
+                onClick={HandleClickOfLink}
+                className="NavFamily"
                 to="/contact"
                 activeclassname="active"
               >
@@ -112,13 +137,15 @@ export function Navbar({opened,setOpened}) {
               </NavLink>
             </div>
             <div className="SearchMenuDivWrapper">
+                <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon"/>
+                <FontAwesomeIcon icon={faUser} id="UserIcon" />
               <form className="SearchForm" onSubmit={HandleFormSubmission}>
                 <input
                   type="text"
                   autoComplete="off"
                   placeholder="search..."
-                  value={searchParams}
-                  onChange={(e) => setSearchParams(e.target.value)}
+                  value={inputSearch}
+                  onChange={(e) => setInputSearch(e.target.value)}
                   id="searchInput"
                 />
                 <button type="submit" id="SearchBtn">
@@ -127,6 +154,7 @@ export function Navbar({opened,setOpened}) {
                 <div className="SuggestionDiv"></div>
               </form>
             </div>
+          </div>
           </div>
 
           <div className="MenuDivWrapper">

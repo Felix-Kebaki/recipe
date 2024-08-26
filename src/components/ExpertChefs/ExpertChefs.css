@@ -1,0 +1,163 @@
+
+.EpertsChefMainSec{
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.EpertsChefMainSec video{
+    width: 100%;
+    height: 57rem;
+    min-height: 100dvh;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.TittleExpertsMainDiv{
+    position: absolute;
+    top: 30%;
+    left: 5rem;
+}
+
+.TittleExpertsMainDiv p{
+    font-size: 7rem;
+    color: white;
+    font-family:  minion;
+    line-height: 8.5rem;
+}
+
+.ExpertsDetailsMainDiv{
+    position: absolute;
+    top: 70%;
+    right: 5rem;
+    width: 35%;
+}
+
+.ExpertsDetailsMainDiv p{
+    color:  white;
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+}
+
+
+
+@media screen and (max-width:1515px){
+    .TittleExpertsMainDiv{
+        left: 1rem;
+    }
+    .ExpertsDetailsMainDiv{
+        right: 1rem;
+    }
+    
+    
+}
+
+@media screen and (max-width:1317px){
+    .TittleExpertsMainDiv p{
+        font-size: 6rem;
+        line-height: 7rem;
+    }
+
+    .ExpertsDetailsMainDiv{
+        width: 40%;
+    }
+    
+    .ExpertsDetailsMainDiv p{
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    
+}
+
+@media screen and (max-width: 999px) {
+
+    .TittleExpertsMainDiv p{
+        font-size: 5rem;
+        line-height: 6rem;
+    }
+
+    .ExpertsDetailsMainDiv{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 812px) {
+    .ExpertsDetailsMainDiv{
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 693px) {
+
+    
+.TittleExpertsMainDiv{
+    top: 20%;
+    left: 0.3rem;
+}
+
+.TittleExpertsMainDiv p{
+    font-size: 4rem;
+    line-height: 4.5rem;
+}
+
+    .ExpertsDetailsMainDiv{
+        width: 75%;
+        right: 0.3rem;
+    }
+    .ExpertsDetailsMainDiv p{
+        font-size: 1rem;
+        line-height: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .TittleExpertsMainDiv{
+        top: 15%;
+    }
+
+    .TittleExpertsMainDiv p{
+        font-size: 3.5rem;
+        line-height: 4rem;
+    }
+    
+    .ExpertsDetailsMainDiv{
+        width: 85%;
+        top: 80%;
+    }
+
+    .ExpertsDetailsMainDiv p{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 388px) {
+
+    .TittleExpertsMainDiv p{
+        font-size: 3rem;
+        line-height: 3.5rem;
+    }
+
+    .ExpertsDetailsMainDiv{
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    
+    .TittleExpertsMainDiv p{
+        font-size: 2.6rem;
+        line-height: 3.3rem;
+    }
+
+}
+
+@media screen and (max-width: 287px) {
+    .TittleExpertsMainDiv p{
+        font-size: 2.3rem;
+        line-height: 2.6rem;
+    }
+
+    .ExpertsDetailsMainDiv p{
+        font-size: 0.8rem;
+    }
+}

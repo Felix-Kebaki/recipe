@@ -1,0 +1,129 @@
+
+
+.WhoWeAreMainSec{
+    width: 100%;
+    height: auto;
+    margin-top: 3rem;
+    padding: 2rem 0rem 4rem 0rem;
+    background-color: white;
+}
+
+.WhoWeAreMainDiv{
+    width: 90%;
+    margin: 0rem auto 0rem;
+}
+
+.WhoWeAreWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: start;
+}
+
+.WhoWeAreWrapper div{
+    width: 45%;
+}
+
+.HowWeDoWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.HowWeDoWrapper div{
+    width: 45%;
+}
+
+#TittleWhoWeAre{
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+#DescriptionWhoWeAre{
+    margin-top: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+#DescriptionWhoWeAreDown{
+    margin-top: 1.5rem;
+    font-size: 1.7rem;
+    opacity: 0.9;
+}
+
+
+@media screen and (max-width:1515px){
+    .WhoWeAreMainDiv{
+        width: 97%;
+    }
+    
+}
+
+@media screen and (max-width:1349px){
+    .WhoWeAreWrapper div{
+        width: 55%;
+    }
+    
+    .HowWeDoWrapper div{
+        width: 55%;
+    }
+    
+}
+
+@media screen and (max-width:976px){
+    .WhoWeAreWrapper div{
+        width: 75%;
+    }
+    
+    .HowWeDoWrapper div{
+        width: 75%;
+        margin-top: 3rem;
+    }
+}
+
+@media screen and (max-width:733px){
+    .WhoWeAreWrapper div{
+        width: 85%;
+    }
+    
+    .HowWeDoWrapper div{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:534px){
+    .WhoWeAreWrapper div{
+        width: 100%;
+    }
+    
+    .HowWeDoWrapper div{
+        width: 100%;
+    }
+
+    #TittleWhoWeAre{
+        margin-top: 1.5rem;
+        font-size: 0.8rem;
+    }
+
+    #DescriptionWhoWeAre{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+    #DescriptionWhoWeAreDown{
+        font-size: 1.5rem;
+        margin-top: 1rem;
+    }
+    
+}
+
+@media screen and (max-width:352px){
+    
+    #DescriptionWhoWeAre{
+        font-size: 1.3rem;
+    }
+    
+    #DescriptionWhoWeAreDown{
+        font-size: 1.3rem;
+    }
+}

@@ -18,14 +18,21 @@
     width: 100%;
     display: flex;
     align-items: center;
-    column-gap: 2rem;
     justify-content: space-between;
+}
+
+.ImageLinksInputNav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .LinksSearchMenuDivWrapper{
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-left: 1rem;
 }
 
 
@@ -33,13 +40,13 @@
 .LinksSearchMenuDivWrapper div{
     column-gap: 1rem;
     display: flex;
-    justify-content: space-between;
+    column-gap: 1rem;
 }
 
 .NavFamily{
     text-decoration:none;
     color:black;
-    font-size:1.3rem;
+    font-size:1.4rem;
     padding: 0rem 0.5rem 0.2rem 0.5rem;
     position: relative;
 }
@@ -55,6 +62,7 @@
     left: 0;
     bottom: 0;
     height: 0.13rem;
+    border-radius: 0.8rem;
     background-color: #6565d1;
     transform: scale(0,1);
     transition: all 0.5s ease-out;
@@ -67,31 +75,55 @@
 .SearchMenuDivWrapper{
     display: flex;
     justify-content: end;
+    align-items: center;
 }
 .SearchForm{
-    width: 100%;
+    width: 18rem;
     display: flex;
-    column-gap:1rem;
+    border: #6565d1  0.1rem solid;
+    border-radius: 0.2rem;
     position: relative;
 }
 
 #searchInput{
+    width: 90%;
     font-size:1rem;
     padding:0.3rem 0.5rem;
-    border-radius: 0.2rem;
     outline: none;
-    width: 18rem;
-    border: #6565d1  0.1rem solid;
+    border: none;
+    background-color: transparent;
 }
 
 #SearchBtn{
     border: none;
     font-size: 1.2rem;
     cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0.3rem;
+    margin-right: 0.2rem;
     background-color: transparent;
 }
 
+#ShoppingBagIcon{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
 
+#UserIcon{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+#ShoppingBagIcon:hover{
+    color: #6565d1;
+}
+
+#UserIcon:hover{
+    color: #6565d1;
+}
 
 .SuggestionDiv{
     position: absolute;
@@ -106,6 +138,7 @@
 .MenuDivWrapper{
     display: none;
     z-index: 9999;
+    width: 10%;
 }
 
 .MenuDivWrapper img{
@@ -150,6 +183,7 @@
         right: 0;
         width: 40%;
         top: -0.6rem;
+        height: auto;
         min-height: 100dvh;
         background-color: white;
         display: flex;
@@ -170,6 +204,7 @@
         display: flex;
         flex-direction: column;
         margin: 0rem 0rem 0rem 1.5rem;
+        overflow: auto;
     }
     .NavFamily{
         font-size:1.5rem;

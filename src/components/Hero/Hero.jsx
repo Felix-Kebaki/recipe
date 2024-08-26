@@ -60,7 +60,7 @@ export function Hero() {
               your loved ones.Let's cook something amazing together!
             </p>
             <div className="StartCookingBtnDiv">
-              <Link to="/">Explore Delicious Recipes</Link>
+              <Link to="/">Shop Ingredients</Link>
             </div>
           </div>
 

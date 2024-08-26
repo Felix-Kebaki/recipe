@@ -7,6 +7,7 @@
   font-family: SFP;
   src: url(../src/assets/fonts/SFPRODISPLAYREGULAR.OTF);
 }
+/* BAB86C */
 
 *{
   margin: 0;
@@ -25,7 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  background-color: rgb(221, 221, 241);
+  background-color: #ddddf1;
   position: relative;
 }
 
@@ -42,4 +43,11 @@
 
 .OverflowOnMainShow{
   display: block;
+}
+
+
+.LoadingMainDiv{
+  width: 30rem;
+  height: 20rem;
+  background-color: red;
 }
