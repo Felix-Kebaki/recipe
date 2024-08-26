@@ -1,170 +1,330 @@
-.IngredientsMainSec{
-    width: 100%;
-    padding: 3rem 0rem 3rem 0rem;
+.IngredientsMainSec {
+  width: 100%;
+  padding: 3rem 0rem 3rem 0rem;
 }
 
-.IngredientMainDiv{
-    width: 100%;
-    display: flex;
-    height: 50rem;
+.IngredientMainDiv {
+  width: 100%;
+  display: flex;
+  height: 50rem;
 }
 
-.IngredientImageWrapper{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
+.IngredientImageWrapper {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
 }
 
-.IngredientImageWrapper img{
-    width: 100%;
-    height: 90%;
+.IngredientImageWrapper img {
+  width: 100%;
+  height: 90%;
 }
 
-.IngredientsWordingWrapper{
-    width: 50%;
-    height: 100%;
-    background-color: #6565d1;
+.IngredientsWordingWrapper {
+  width: 50%;
+  height: 100%;
+  background-color: #6565d1;
 }
 
-.InsideIngreWrapperDiv{
-    width: 100%;
-    height: 100%;
-    padding: 2rem 0rem 0rem 3rem;
+.InsideIngreWrapperDiv {
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0rem 0rem 3rem;
 }
 
-#ShopWithUsTittle{
-    color: white;
-    opacity: 0.7;
-    font-size: 0.9rem;
+#ShopWithUsTittle {
+  color: white;
+  opacity: 0.7;
+  font-size: 0.9rem;
 }
 
-#IngredientActualTittle{
-    color: white;
-    font-size: 4.5rem;
-    margin-top: 2rem;
+#IngredientActualTittle {
+  color: white;
+  font-size: 4.5rem;
+  margin-top: 2rem;
 }
 
-.IngredientsWordsOnlyMainDiv{
-    width: 70%;
-    height: 60%;
-    float: right;
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.IngredientsWordsOnlyMainDiv {
+  width: 70%;
+  height: 60%;
+  float: right;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.IngredientsUpperWording{
-    width: 100%;
+.IngredientsUpperWording {
+  width: 100%;
 }
 
-.IngredientsUpperWording p{
-    font-size: 1.3rem;
-    color: black;
-    margin-top: 1rem;
+.IngredientsUpperWording p {
+  font-size: 1.3rem;
+  color: black;
+  margin-top: 1rem;
 }
 
-.IngredientsLowerWording{
-    width: 100%;
-    display: flex;
-    column-gap: 0.9rem;
+.IngredientsLowerWording {
+  width: 100%;
+  display: flex;
+  column-gap: 0.9rem;
 }
 
-.IngredientsLowerWording .VerticalLineIngredients{
-    height: 100%;
-    width: 0.2rem;
-    background-color: black;
+.IngredientsLowerWording .VerticalLineIngredients {
+  height: 100%;
+  width: 0.2rem;
+  background-color: black;
 }
 
-.LowerActualWordsIngr p{
+.LowerActualWordsIngr p {
+  font-size: 1.2rem;
+}
+
+.LowerActualWordsIngr div {
+  padding: 0.8rem 0rem 0.2rem 0rem;
+}
+
+.LowerActualWordsIngr div button {
+  padding: 0.5rem 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1498px) {
+  #IngredientActualTittle {
+    font-size: 4rem;
+  }
+
+  .IngredientsWordsOnlyMainDiv {
+    width: 75%;
+    margin-top: 0.8rem;
+  }
+
+  .IngredientsUpperWording p {
     font-size: 1.2rem;
+    margin-top: 0.7rem;
+  }
+
+  .LowerActualWordsIngr p {
+    font-size: 1.14rem;
+  }
 }
 
-.LowerActualWordsIngr div{
-    padding: 0.8rem 0rem 0.2rem 0rem;
-}
-
-.LowerActualWordsIngr div button{
-    padding: 0.5rem 2rem;
-    background-color: black;
-    color: white;
-    border: none;
-    font-size: 1.2rem;
-    border-radius: 2rem;
-    cursor: pointer;
-}
-
-
-@media screen and (max-width:1498px){
-    #IngredientActualTittle{
-        font-size: 4rem;
-    }
-
-    .IngredientsWordsOnlyMainDiv{
-        width: 75%;
-        margin-top: 0.8rem;
-    }
-    
-    .IngredientsUpperWording p{
-        font-size: 1.2rem;
-        margin-top: 0.7rem;
-    }
-
-    .LowerActualWordsIngr p{
-        font-size: 1.14rem;
-    }
-    
-    
-}
-
-@media screen and (max-width:1345px){
-    
-.InsideIngreWrapperDiv{
+@media screen and (max-width: 1345px) {
+  .InsideIngreWrapperDiv {
     padding: 2rem 0rem 0rem 1.5rem;
+  }
 }
 
+@media screen and (max-width: 1296px) {
+  #IngredientActualTittle {
+    font-size: 3.7rem;
+  }
+
+  .IngredientsWordsOnlyMainDiv {
+    width: 80%;
+  }
+
+  .IngredientsUpperWording p {
+    font-size: 1.1rem;
+  }
+
+  .LowerActualWordsIngr p {
+    font-size: 1.04rem;
+  }
 }
 
-@media screen and (max-width:1296px){
-    #IngredientActualTittle{
-        font-size: 3.7rem;
-    }
-
-    .IngredientsWordsOnlyMainDiv{
-        width: 80%;
-    }
-    
-    .IngredientsUpperWording p{
-        font-size: 1.1rem;
-    }
-
-    .LowerActualWordsIngr p{
-        font-size: 1.04rem;
-    }
+@media screen and (max-width: 1203px) {
+  #IngredientActualTittle {
+    font-size: 3.3rem;
+  }
 }
 
-@media screen and (max-width:1203px){
-    #IngredientActualTittle{
-        font-size: 3.3rem;
-    }
+@media screen and (max-width: 1193px) {
+  .IngredientMainDiv {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .IngredientImageWrapper {
+    width: 100%;
+    height: 30rem;
+  }
+
+  .IngredientsWordingWrapper {
+    width: 100%;
+    height: auto;
+  }
+
+  .InsideIngreWrapperDiv {
+    padding: 2rem 0rem 0rem 3rem;
+  }
+
+  #IngredientActualTittle {
+    font-size: 4.5rem;
+    max-width: 70%;
+    margin-top: 1.5rem;
+  }
+
+  .IngredientsWordsOnlyMainDiv {
+    width: 70%;
+    height: auto;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+  }
+
+  .IngredientsLowerWording {
+    margin-top: 8rem;
+    display: flex;
+    align-items: center;
+    column-gap: 0.9rem;
+  }
+
+  .IngredientsLowerWording .VerticalLineIngredients {
+    height: 7rem;
+  }
+
+  .IngredientsUpperWording p {
+    font-size: 1.3rem;
+  }
+
+  .LowerActualWordsIngr p {
+    font-size: 1.2rem;
+  }
 }
 
-@media screen and (max-width:1193px){
-    .IngredientMainDiv{
-        flex-direction: column;
-        height: auto;
-    }
-    
-    .IngredientImageWrapper{
-        width: 100%;
-        height: 30rem;
-    }
+@media screen and (max-width: 1054px) {
+  #IngredientActualTittle {
+    max-width: 78%;
+  }
+}
 
-    .IngredientsWordingWrapper{
-        width: 100%;
-        height: auto;
-    }
-    
+@media screen and (max-width: 954px) {
+  .InsideIngreWrapperDiv {
+    padding: 2rem 0rem 0rem 1.5rem;
+  }
+
+  #IngredientActualTittle {
+    max-width: 75%;
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 864px) {
+  .InsideIngreWrapperDiv {
+    padding: 2rem 0rem 0rem 0.3rem;
+  }
+
+  .IngredientsWordsOnlyMainDiv {
+    width: 80%;
+  }
+  .IngredientsUpperWording p {
+    font-size: 1.2rem;
+  }
+  .LowerActualWordsIngr p {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 842px) {
+  #ShopWithUsTittle {
+    font-size: 0.8rem;
+  }
+  #IngredientActualTittle {
+    max-width: 73%;
+    font-size: 3.5rem;
+  }
+  .IngredientsWordsOnlyMainDiv {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  #IngredientActualTittle {
+    max-width: 70%;
+    font-size: 3rem;
+  }
+
+  .IngredientsLowerWording {
+    margin-top: 7rem;
+  }
+  .IngredientsUpperWording p {
+    font-size: 1.1rem;
+  }
+  .LowerActualWordsIngr p {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 681px) {
+  #IngredientActualTittle {
+    max-width: 79%;
+  }
+}
+
+@media screen and (max-width: 606px) {
+  #IngredientActualTittle {
+    max-width: 83%;
+  }
+  .IngredientsLowerWording .VerticalLineIngredients {
+    height: 8rem;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  #IngredientActualTittle {
+    max-width: 88%;
+  }
+  .IngredientsWordsOnlyMainDiv {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 550px) {
+    #IngredientActualTittle {
+        max-width: 100%;
+      }
+}
+
+@media screen and (max-width: 484px) {
+    #IngredientActualTittle {
+        font-size: 2.8rem;
+      }
+}
+
+@media screen and (max-width: 453px) {
+    #IngredientActualTittle {
+        font-size: 2.6rem;
+      }
+      .IngredientsWordsOnlyMainDiv {
+        width: 95%;
+      }
+      .IngredientsUpperWording p {
+        font-size: 1rem;
+      }
+      .LowerActualWordsIngr p {
+        font-size: 0.95rem;
+      }
+}
+
+
+@media screen and (max-width: 425px) {
+    #IngredientActualTittle {
+        font-size: 2.4rem;
+      }
+}
+
+@media screen and (max-width: 391px) {
+    #IngredientActualTittle {
+        font-size: 2.2rem;
+      }
+      #ShopWithUsTittle {
+        font-size: 0.7rem;
+      }
 }

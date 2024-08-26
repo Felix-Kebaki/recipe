@@ -29,23 +29,24 @@ export function Navbar({ opened, setOpened }) {
   };
 
   const HandleClickMenu = () => {
-    setOpened((currentOpened) => !currentOpened);
+    const AppearNav=document.querySelector(".LinksSearchMenuDivWrapper")
     
-    document
-      .querySelector(".LinksSearchMenuDivWrapper")
-      .classList.toggle("LinksSearchMenuDivWrapperDisappear");
-  };
-  if (opened) {
-    document.body.style.overflow = "hidden";
-  } else {
+  if (AppearNav.classList.contains("LinksSearchMenuDivWrapperDisappear")) {
+    setOpened(false)
+    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear")
     document.body.style.overflow = "auto";
+  } else {
+    AppearNav.classList.add("LinksSearchMenuDivWrapperDisappear")
+    document.body.style.overflow = "hidden";
+    setOpened(true)
   }
+}
 
   const HandleClickOfLink = () => {
-    document
-      .querySelector(".LinksSearchMenuDivWrapper")
-      .classList.toggle("LinksSearchMenuDivWrapperDisappear");
-    setOpened((currentOpened) => !currentOpened);
+    const AppearNav=document.querySelector(".LinksSearchMenuDivWrapper")
+    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear")
+    document.body.style.overflow = "auto";
+    setOpened(false)
   };
 
   const HandleNavOnScroll = () => {
@@ -84,77 +85,79 @@ export function Navbar({ opened, setOpened }) {
       <section>
         <nav className="MainNav">
           <div className="ImageLinksInputNav">
-          <img src={Logo} alt="SimpleRecipes" id="MainLogoAtNav" />
-          <div className="LinksSearchMenuDivWrapper">
-            <div>
-              <NavLink
-                onClick={HandleClickOfLink}
-                className="NavFamily"
-                to="/recipe"
-                activeclassname="active"
-              >
-                Home
-              </NavLink>
-              <NavLink
-                onClick={HandleClickOfLink}
-                className="NavFamily"
-                to="/about us"
-                activeclassname="active"
-              >
-                About us
-              </NavLink>
-              <NavLink
-                onClick={HandleClickOfLink}
-                className="NavFamily"
-                to="/recipes"
-                activeclassname="active"
-              >
-                Recipes
-              </NavLink>
-              <NavLink
-                onClick={HandleClickOfLink}
-                className="NavFamily"
-                to="/blog"
-                activeclassname="active"
-              >
-                Blog
-              </NavLink>
-              <NavLink
-                onClick={HandleClickOfLink}
-                className="NavFamily"
-                to="/shop"
-                activeclassname="active"
-              >
-                Shop
-              </NavLink>
-              <NavLink
-                onClick={HandleClickOfLink}
-                className="NavFamily"
-                to="/contact"
-                activeclassname="active"
-              >
-                Contact
-              </NavLink>
-            </div>
-            <div className="SearchMenuDivWrapper">
-                <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon"/>
+            <img src={Logo} alt="SimpleRecipes" id="MainLogoAtNav" />
+            <div className="LinksSearchMenuDivWrapper">
+              <div className="OnlyLinksOnNav">
+                <NavLink
+                  onClick={HandleClickOfLink}
+                  className="NavFamily"
+                  to="/recipe"
+                  activeclassname="active"
+                >
+                  Home
+                </NavLink>
+                <NavLink
+                  onClick={HandleClickOfLink}
+                  className="NavFamily"
+                  to="/about us"
+                  activeclassname="active"
+                >
+                  About us
+                </NavLink>
+                <NavLink
+                  onClick={HandleClickOfLink}
+                  className="NavFamily"
+                  to="/recipes"
+                  activeclassname="active"
+                >
+                  Recipes
+                </NavLink>
+                <NavLink
+                  onClick={HandleClickOfLink}
+                  className="NavFamily"
+                  to="/blog"
+                  activeclassname="active"
+                >
+                  Blog
+                </NavLink>
+                <NavLink
+                  onClick={HandleClickOfLink}
+                  className="NavFamily"
+                  to="/shop"
+                  activeclassname="active"
+                >
+                  Shop
+                </NavLink>
+                <NavLink
+                  onClick={HandleClickOfLink}
+                  className="NavFamily"
+                  to="/contact"
+                  activeclassname="active"
+                >
+                  Contact
+                </NavLink>
+              </div>
+              <div className="SearchMenuDivWrapper">
+                <div>
+                <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" />
                 <FontAwesomeIcon icon={faUser} id="UserIcon" />
-              <form className="SearchForm" onSubmit={HandleFormSubmission}>
-                <input
-                  type="text"
-                  autoComplete="off"
-                  placeholder="search..."
-                  value={inputSearch}
-                  onChange={(e) => setInputSearch(e.target.value)}
-                  id="searchInput"
-                />
-                <button type="submit" id="SearchBtn">
-                  <FontAwesomeIcon icon={faMagnifyingGlass} />
-                </button>
-                <div className="SuggestionDiv"></div>
-              </form>
+                </div>
+                <form className="SearchForm" onSubmit={HandleFormSubmission}>
+                  <input
+                    type="text"
+                    autoComplete="off"
+                    placeholder="search..."
+                    value={inputSearch}
+                    onChange={(e) => setInputSearch(e.target.value)}
+                    id="searchInput"
+                  />
+                  <button type="submit" id="SearchBtn">
+                    <FontAwesomeIcon icon={faMagnifyingGlass} />
+                  </button>
+                  <div className="SuggestionDiv"></div>
+                </form>
+              </div>
             </div>
-          </div>
           </div>
 
           <div className="MenuDivWrapper">
