@@ -1,8 +1,8 @@
 import Chef1 from "../assets/images/chef1.jpeg";
 import Chef2 from "../assets/images/chef2.jpeg";
 import Chef3 from "../assets/images/chef3.jpeg";
-import Chef4 from "../assets/images/chef1.jpeg";
-import Chef5 from "../assets/images/chef3.jpeg";
+import Chef4 from "../assets/images/chef4.jpeg";
+import Chef5 from "../assets/images/chef5.jpeg";
 
 export const ChefsDetails = [
   {
@@ -31,7 +31,7 @@ export const ChefsDetails = [
   },
   {
     id: 4,
-    image: Chef5,
+    image: Chef4,
     ChefName: " Leo Espinosa",
     specialty: "Sauciers,fry chef,roast chef,meat chef",
     nationality: "American",
@@ -39,7 +39,7 @@ export const ChefsDetails = [
   },
   {
     id: 5,
-    image: Chef4,
+    image: Chef5,
     ChefName: "Kim Woodward",
     specialty: "sous chef,Vegetable chef,meat chef,fish chef",
     nationality: "Colombian",
