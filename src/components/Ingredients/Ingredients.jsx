@@ -40,7 +40,7 @@ export function Ingredients() {
         yPercent:-120
       })
       .from(".IngredientsLowerWording", {
-        delay:0.4,
+        delay:0.2,
         yPercent:120
       })
   }, []);

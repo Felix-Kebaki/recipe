@@ -135,6 +135,15 @@
     height: auto;
     background-color: black;
     border-radius: 0.3rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.SuggestionDiv a{
+    text-decoration: none;
+    color: white;
+    padding: 0.2rem 0rem 0.2rem 0.2rem;
+    font-size: 0.9rem;
 }
 
 

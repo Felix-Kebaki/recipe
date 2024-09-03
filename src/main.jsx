@@ -3,7 +3,6 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
 import { Home } from './pages/Home.jsx'
-import { About } from './pages/About.jsx'
 import { Recipes } from './pages/Recipes.jsx'
 import { Contact } from './pages/Contact.jsx'
 import { Blog } from './pages/Blog.jsx'
@@ -18,10 +17,6 @@ const router=createBrowserRouter([
       {
         path:"/recipe",
         element:<Home/>
-      },
-      {
-        path:"/about us",
-        element:<About/>
       },
       {
         path:"/recipes",

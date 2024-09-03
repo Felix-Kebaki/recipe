@@ -5,7 +5,8 @@ import { faUser } from "@fortawesome/free-regular-svg-icons";
 import React, { useEffect, useState, useContext } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/logo.svg";
 import { GlobalFetchContext } from "../../context/GlobalContext";
 import Menu from "../../assets/images/Menu.svg";
@@ -13,8 +14,16 @@ import Closed from "../../assets/images/closeMenu.svg";
 import "./navbar.css";
 
 export function Navbar({ opened, setOpened }) {
-  const [inputSearch, setInputSearch] = useState("");
-  const { setSearchParams, setLoading } = useContext(GlobalFetchContext);
+  const {
+    inputSearch,
+    HandleInputSearch,
+    recipe,
+    setInputSearch,
+    setSearchParams,
+    searchParams,
+    ifSearching,
+    setIfSearching
+  } = useContext(GlobalFetchContext);
   const [getScroll, setGetScroll] = useState({
     y: 0,
     PrevY: 0,
@@ -22,33 +31,32 @@ export function Navbar({ opened, setOpened }) {
   const navigate = useNavigate();
 
   const HandleFormSubmission = (e) => {
-    setLoading(true);
     e.preventDefault();
     setSearchParams(inputSearch);
     setInputSearch("");
+    setIfSearching(false)
     navigate("/recipes");
-    setLoading(false);
   };
 
   const HandleClickMenu = () => {
-    const AppearNav=document.querySelector(".LinksSearchMenuDivWrapper")
-    
-  if (AppearNav.classList.contains("LinksSearchMenuDivWrapperDisappear")) {
-    setOpened(false)
-    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear")
-    document.body.style.overflow = "auto";
-  } else {
-    AppearNav.classList.add("LinksSearchMenuDivWrapperDisappear")
-    document.body.style.overflow = "hidden";
-    setOpened(true)
-  }
-}
+    const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
+
+    if (AppearNav.classList.contains("LinksSearchMenuDivWrapperDisappear")) {
+      setOpened(false);
+      AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
+      document.body.style.overflow = "auto";
+    } else {
+      AppearNav.classList.add("LinksSearchMenuDivWrapperDisappear");
+      document.body.style.overflow = "hidden";
+      setOpened(true);
+    }
+  };
 
   const HandleClickOfLink = () => {
-    const AppearNav=document.querySelector(".LinksSearchMenuDivWrapper")
-    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear")
+    const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
+    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
     document.body.style.overflow = "auto";
-    setOpened(false)
+    setOpened(false);
   };
 
   const HandleNavOnScroll = () => {
@@ -64,6 +72,7 @@ export function Navbar({ opened, setOpened }) {
     if (getScroll.y > 15) {
       if (getScroll.y > getScroll.PrevY) {
         headNav.style.transform = "translateY(-10rem)";
+        setIfSearching(false)
       } else if (getScroll.y < getScroll.PrevY) {
         headNav.style.boxShadow = "0rem 0rem 2rem #6565d1 ";
         headNav.style.background = "white";
@@ -77,12 +86,12 @@ export function Navbar({ opened, setOpened }) {
     }
   };
 
-  useGSAP(()=>{
-    gsap.from(".MainNav",{
-      yPercent:-110,
-      delay:0.6
-    })
-  },[])
+  useGSAP(() => {
+    gsap.from(".MainNav", {
+      yPercent: -110,
+      delay: 0.6,
+    });
+  }, []);
 
   useEffect(() => {
     window.addEventListener("scroll", HandleNavOnScroll);
@@ -104,14 +113,6 @@ export function Navbar({ opened, setOpened }) {
                   activeclassname="active"
                 >
                   Home
-                </NavLink>
-                <NavLink
-                  onClick={HandleClickOfLink}
-                  className="NavFamily"
-                  to="/about us"
-                  activeclassname="active"
-                >
-                  About us
                 </NavLink>
                 <NavLink
                   onClick={HandleClickOfLink}
@@ -148,8 +149,8 @@ export function Navbar({ opened, setOpened }) {
               </div>
               <div className="SearchMenuDivWrapper">
                 <div>
-                <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" />
-                <FontAwesomeIcon icon={faUser} id="UserIcon" />
+                  <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" />
+                  <FontAwesomeIcon icon={faUser} id="UserIcon" />
                 </div>
                 <form className="SearchForm" onSubmit={HandleFormSubmission}>
                   <input
@@ -157,13 +158,18 @@ export function Navbar({ opened, setOpened }) {
                     autoComplete="off"
                     placeholder="search..."
                     value={inputSearch}
-                    onChange={(e) => setInputSearch(e.target.value)}
+                    onChange={HandleInputSearch}
                     id="searchInput"
                   />
                   <button type="submit" id="SearchBtn">
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </button>
-                  <div className="SuggestionDiv"></div>
+                  <div className="SuggestionDiv">
+                    {ifSearching
+                      ? recipe &&
+                        recipe.map((suggest) => <Link key={suggest.idMeal}>{suggest.strMeal}</Link>)
+                      : null}
+                  </div>
                 </form>
               </div>
             </div>
