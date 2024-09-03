@@ -25,7 +25,7 @@ export function ExpertChefs() {
       scrollTrigger:{
         trigger:".ExpertsDetailsMainDiv",
         toggleActions:"play none none none",
-        start:"top 60%"
+        start:"top 70%"
       },
       xPercent:-120
     })
