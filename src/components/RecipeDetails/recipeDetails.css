@@ -1,0 +1,95 @@
+.RecipeDetailsMainSec{
+    width: 90%;
+    margin: 6rem auto 4rem;
+}
+
+.EachClassDetailsRe{
+    display: flex;
+    width:100%;
+    justify-content:space-between;
+    height:45rem;
+}
+
+.DetailsImageWrapper{
+    width:50%;
+    height:100%;
+}
+
+.DetailsImageWrapper img{
+    width: 100%;
+    height:100%;
+}
+
+.DetailsWordwrapperEach{
+    width: 50%;
+    height: 100%;
+}
+
+.InsideDetailsWording{
+    padding: 1rem 0rem 0rem 1rem;
+}
+
+#EachRecipeName{
+    font-size: 3rem;
+}
+
+#IngredTittleEach{
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    margin-top: 1rem;
+    font-weight: bolder;
+    opacity: 0.7;
+}
+
+#AllIngredientsEach{
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.ButtonDivWrapperDetails{
+    padding: 1.5rem 0rem 1rem 0rem;
+}
+
+#ShopAtEacDetails{
+    text-decoration: none;
+    background-color: #6565d1;
+    border-radius:0.8rem;
+    padding: 0.4rem 1rem;
+    cursor:pointer;
+    color:black;
+    margin-top: 4rem;
+}
+
+#InstructionTittle{
+    font-size: 0.8rem;
+    font-weight:bolder;
+    opacity:0.7;
+    text-transform:uppercase;
+    margin-top:1rem;
+}
+
+#AllInstructionsEach{
+    margin-top:1rem;
+    font-size:1.1rem;
+}
+
+.InsideDetailsWording .WrapperTagsInDetails{
+    display: flex;
+    justify-content: space-between;
+    margin-top:2rem;
+}
+
+.InsideDetailsWording .WrapperTagsInDetails div{
+    display: flex;
+    column-gap: 0.4rem;
+    align-items: center;
+}
+
+#DetailsDotEach{
+    font-size: 0.5rem;
+    color: #6565d1;
+}
+
+.InsideDetailsWording .WrapperTagsInDetails div p{
+    text-transform: uppercase;
+}

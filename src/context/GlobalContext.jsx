@@ -8,6 +8,7 @@ export const GlobalContextFunction = ({ children }) => {
   const [recipe, setRecipe] = useState("");
   const [loading, setLoading] = useState(false);
   const [ifSearching, setIfSearching] = useState(false);
+  const [recipeDetails,setRecipeDetails]=useState("")
 
   const fetchData = async () => {
     try {
@@ -66,6 +67,8 @@ export const GlobalContextFunction = ({ children }) => {
         ifSearching,
         setIfSearching,
         HandleInputSearch,
+        setRecipeDetails,
+        recipeDetails
       }}
     >
       {children}

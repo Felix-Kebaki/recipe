@@ -12,7 +12,7 @@ export function DisplayRecipe() {
     <section className="DisplayRecipeMainDiv">
       {recipe &&
         recipe.map((each) => (
-          <Link className="DisplayEachRecipe" key={each.idMeal}>
+          <Link to={"/recipes/"+each.idMeal} className="DisplayEachRecipe" key={each.idMeal}>
             <div className="EachRecipeImageDiv">
               <img
                 src={each.strMealThumb}

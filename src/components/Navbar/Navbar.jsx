@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import React, { useEffect, useState, useContext } from "react";
 import { useGSAP } from "@gsap/react";
@@ -20,7 +21,6 @@ export function Navbar({ opened, setOpened }) {
     recipe,
     setInputSearch,
     setSearchParams,
-    searchParams,
     ifSearching,
     setIfSearching
   } = useContext(GlobalFetchContext);
@@ -58,6 +58,11 @@ export function Navbar({ opened, setOpened }) {
     document.body.style.overflow = "auto";
     setOpened(false);
   };
+
+  const HandleSuggestionLink=()=>{
+    setIfSearching(false)
+    setInputSearch("")
+  }
 
   const HandleNavOnScroll = () => {
     setGetScroll((prev) => {
@@ -149,6 +154,7 @@ export function Navbar({ opened, setOpened }) {
               </div>
               <div className="SearchMenuDivWrapper">
                 <div>
+                  <Link to="/favourite"><FontAwesomeIcon icon={faHeart} id="FavouriteIcon"/></Link>
                   <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" />
                   <FontAwesomeIcon icon={faUser} id="UserIcon" />
                 </div>
@@ -167,7 +173,7 @@ export function Navbar({ opened, setOpened }) {
                   <div className="SuggestionDiv">
                     {ifSearching
                       ? recipe &&
-                        recipe.map((suggest) => <Link key={suggest.idMeal}>{suggest.strMeal}</Link>)
+                        recipe.map((suggest) => <Link to={"/recipes"} key={suggest.idMeal} onClick={HandleSuggestionLink}>{suggest.strMeal}</Link>)
                       : null}
                   </div>
                 </form>
