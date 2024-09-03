@@ -1,13 +1,54 @@
 import React from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+import { useGSAP } from "@gsap/react";
 import "./Ingredients.css";
 import IngredientsPic from "../../assets/images/Ingredients.jpeg";
 
 export function Ingredients() {
+  useGSAP(() => {
+    gsap.from("#IngredientImageMain", {
+      scrollTrigger: {
+        trigger: "#IngredientImageMain",
+        toggleActions: "play none none none",
+        scrub: true,
+        start: "top 90%",
+        end: "top 3%",
+      },
+      yPercent: 20,
+      scale: 1.1,
+    });
+
+    gsap
+      .timeline({
+        scrollTrigger: {
+          trigger: ".IngredientsWordingWrapper",
+          toggleActions: "play none none none",
+          start: "top 80%",
+          end: "top 3%",
+        },
+      })
+      .from("#ShopWithUsTittle", {
+        xPercent: -30,
+        opacity: 0,
+      })
+      .from("#IngredientActualTittle", {
+        opacity: 0,
+      })
+      .from(".IngredientsUpperWording", {
+        yPercent:-120
+      })
+      .from(".IngredientsLowerWording", {
+        delay:0.5,
+        yPercent:120
+      })
+  }, []);
   return (
     <section className="IngredientsMainSec">
       <div className="IngredientMainDiv">
         <div className="IngredientImageWrapper">
-          <img src={IngredientsPic} alt="" />
+          <img src={IngredientsPic} id="IngredientImageMain" />
         </div>
         <div className="IngredientsWordingWrapper">
           <div className="InsideIngreWrapperDiv">
@@ -17,11 +58,11 @@ export function Ingredients() {
             </p>
             <div className="IngredientsWordsOnlyMainDiv">
               <div className="IngredientsUpperWording">
-                <p>
+                <p id="AminationOnUpperWordsOne">
                   Elevate your cooking with premium ingredients from our
                   website.Fresh,high-quality and sourced with care.
                 </p>
-                <p>
+                <p id="AminationOnUpperWordsTwo">
                   Our ingredients are selected for their exceptional flavor and
                   quality,enhancing every dish.Enjoy the convenience of having
                   top-notch ingredients delivered to your door.
@@ -36,7 +77,7 @@ export function Ingredients() {
                     that make every meal memorable and delicious.
                   </p>
                   <div>
-                  <button>Shop</button>
+                    <button>Shop</button>
                   </div>
                 </div>
               </div>

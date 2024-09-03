@@ -17,11 +17,12 @@
   background-color: #ddddf1;
   flex-direction: column;
   justify-content: end;
+  overflow: hidden;
 }
 
 .IngredientImageWrapper img {
   width: 100%;
-  height: 90%;
+  height: 100%;
 }
 
 .IngredientsWordingWrapper {
@@ -34,6 +35,7 @@
   width: 100%;
   height: 100%;
   padding: 2rem 0rem 0rem 3rem;
+  overflow: hidden;
 }
 
 #ShopWithUsTittle {
@@ -56,6 +58,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
 }
 
 .IngredientsUpperWording {
@@ -70,6 +73,7 @@
 
 .IngredientsLowerWording {
   width: 100%;
+  overflow: hidden;
   display: flex;
   column-gap: 0.9rem;
 }

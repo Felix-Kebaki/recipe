@@ -7,7 +7,7 @@ export function DisplayRecipe() {
     const {recipe}=useContext(GlobalFetchContext)
   return (
     <section className='DisplayRecipeMainDiv'>
-        {recipe &&
+        {/* {recipe &&
             recipe.map((each)=>(
                 <div className='DisplayEachRecipe'>
                     <img src={each.recipe.image} alt="RecipeImage" id="MainRecipeImage"/>
@@ -16,7 +16,16 @@ export function DisplayRecipe() {
                     </div>
                 </div>
             ))
-        }
+        } */}
+        <div className='boxWrapper'>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </section>
   )
 }

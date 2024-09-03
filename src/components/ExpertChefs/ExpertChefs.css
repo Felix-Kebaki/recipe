@@ -17,6 +17,7 @@
     position: absolute;
     top: 30%;
     left: 5rem;
+    overflow:hidden;
 }
 
 .TittleExpertsMainDiv p{
@@ -31,6 +32,7 @@
     top: 70%;
     right: 5rem;
     width: 35%;
+    overflow: hidden;
 }
 
 .ExpertsDetailsMainDiv p{

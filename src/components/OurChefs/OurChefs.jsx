@@ -1,4 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger);
 import { ChefsDetails } from "../../constants/data";
 import "./OurChefs.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,19 +12,33 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 export function OurChefs() {
 
-  const [currentIndex,setCurrentIndex]=useState(0)
+
 
   const HandleForwardClick=()=>{
-    setCurrentIndex((prev)=>
-    prev===ChefsDetails.length-1?0:prev+1
-  )
+  
   }
 
   const HandleBackwardClick=()=>{
 
   }
 
-
+  useGSAP(()=>{
+    gsap.timeline({
+      scrollTrigger:{
+        trigger:"#OurChefMainTittle",
+        toggleActions: "play none none none",
+        start:"top 80%",
+        end:"top 3%",
+      }})
+    .from("#OurChefMainTittle",{
+      xPercent: -30,
+      opacity: 0,
+    })
+    .from(".EachChefDiv",{
+      stagger:0.5,
+      opacity:0
+    })
+  },[])
 
   return (
     <section className="OurChefsMainSec">
@@ -34,7 +52,7 @@ export function OurChefs() {
                 key={EachChef.id}
                 className="EachChefDiv">
                 <div className="VideoImageWrapper">
-                  <img src={EachChef.image} alt="" />
+                  <img src={EachChef.image} id="EachChefPic" />
                 </div>
                 <div className="ChefsTopInformation">
                   <div className="DotNationalityDiv">
