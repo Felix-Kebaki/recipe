@@ -3,6 +3,8 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
 import React, { useEffect, useState, useContext } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../../assets/images/logo.svg";
 import { GlobalFetchContext } from "../../context/GlobalContext";
@@ -74,6 +76,13 @@ export function Navbar({ opened, setOpened }) {
       headNav.style.boxShadow = "none";
     }
   };
+
+  useGSAP(()=>{
+    gsap.from(".MainNav",{
+      yPercent:-110,
+      delay:0.6
+    })
+  },[])
 
   useEffect(() => {
     window.addEventListener("scroll", HandleNavOnScroll);

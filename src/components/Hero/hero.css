@@ -24,6 +24,10 @@
   width: 100%;
 }
 
+.BigWordsDiv{
+  overflow: hidden;
+}
+
 .HeroMainWords {
   font-size: 5.5rem;
   color: black;
@@ -99,6 +103,7 @@
   row-gap: 3rem;
   width: 26%;
   margin-top: 5rem;
+  overflow: hidden;
 }
 
 .SmallWordsDiv .SmallTittlesDiv {

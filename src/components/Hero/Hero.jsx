@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 import "./hero.css";
 import delicious from "../../assets/images/delicious.jpeg";
 import MainHero from "../../assets/images/main.jpeg";
@@ -12,6 +14,7 @@ import { ImageSlider } from "./ImageSlider";
 export function Hero() {
   const [currentImage, setCurrentImage] = useState(0);
 
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImage((count) => {
@@ -20,6 +23,28 @@ export function Hero() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  
+  useGSAP(()=>{
+    gsap.timeline()
+    .from(".SliderContentOnHeroDiv",{
+      xPercent:100
+    })
+    .from(".SmallWordsDiv",{
+      xPercent:300
+    })
+
+    gsap.from(".ImageWrapperHero",{
+      opacity:0,
+      y:300,
+      x:100,
+      duration:0.7
+    })
+
+    gsap.from(".HeroMainWords",{
+      xPercent:-130
+    })
+  },[])
 
   return (
     <section className="HeroMainSec">
@@ -74,15 +99,6 @@ export function Hero() {
               />
             </div>
 
-            {/* <div className="HistorySection">
-            <p id="HistoryTittle">Explore Our Flavor Journey</p>
-            <div>
-              <Link to="">
-                <p></p>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-              </Link>
-            </div>
-          </div> */}
           </div>
         </div>
       </div>

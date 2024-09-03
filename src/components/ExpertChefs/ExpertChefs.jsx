@@ -10,19 +10,23 @@ export function ExpertChefs() {
 
   useGSAP(()=>{
     gsap.timeline({
+
+    })
+    gsap.from("#AnimationOnExpertTittle",{
       scrollTrigger:{
         trigger:".TittleExpertsMainDiv",
         toggleActions:"play none none none",
         start:"top 60%",
-        
-      }
-    })
-    .from("#AnimationOnExpertTittle",{
+      },
       xPercent:-20,
       opacity:0,
     })
-    .from("#AnimateExpertDetails",{
-      delay:0.5,
+    gsap.from("#AnimateExpertDetails",{
+      scrollTrigger:{
+        trigger:".ExpertsDetailsMainDiv",
+        toggleActions:"play none none none",
+        start:"top 60%"
+      },
       xPercent:-120
     })
   },[])
