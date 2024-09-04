@@ -1,21 +1,56 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { GlobalFetchContext } from "../../context/GlobalContext";
 import "./displayRecipe.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 export function DisplayRecipe() {
-  const { recipe ,HandleAddToFav,favouriteList} = useContext(GlobalFetchContext);
+  const { recipe ,HandleAddToFav,favouriteList,categories,HandleClickOnCategory} = useContext(GlobalFetchContext);
+  const [filter,setFilter]=useState(false)
 
   const HandleClickOfFav=(e)=>{
     e.preventDefault()
   }
 
+  const HandleMouseEnter=()=>{
+    setFilter(true)
+  }
+  const HandleMouseLeave=()=>{
+    setFilter(false)
+  }
+
+  useEffect(()=>{
+    const BtnFilter=document.querySelector(".FilterStill")
+    BtnFilter.addEventListener("mouseenter",HandleMouseEnter)
+    BtnFilter.addEventListener("mouseleave",HandleMouseLeave)
+    
+
+    return()=>{
+        BtnFilter.removeEventListener("mouseenter",HandleMouseEnter)
+        BtnFilter.removeEventListener("mouseleave",HandleMouseLeave)
+    }
+  },[])
  
   return (
-    <section className="DisplayRecipeMainDiv">
+    <section className="DisplayRecipeMainSec">
+        <div className="FilterDivWrapper">
+           <ul className="FilterStill">
+            <li className="FilterBtn">Filter <FontAwesomeIcon icon={faAngleDown} /></li>
+            <div className={filter ?"FilterLinksOnlyDiv showFilter":"FilterLinksOnlyDiv unshowFilter"}>
+                {categories && 
+                    categories.map((cat)=>(
+                        <p key={cat.idCategory} id="EachFilterLink" onClick={()=>HandleClickOnCategory(cat.strCategory)}>{cat.strCategory}</p>
+                    ))
+                }
+            </div>
+            </ul>
+
+
+        </div>
+        <div className="DisplayRecipeMainDiv">
       {recipe &&
         recipe.map((each) => (
           <Link to={"/recipes/"+each.idMeal} className="DisplayEachRecipe" key={each.idMeal}>
@@ -39,7 +74,7 @@ export function DisplayRecipe() {
             </div>
           </Link>
         ))}
- 
+    </div>
     </section>
   );
 }

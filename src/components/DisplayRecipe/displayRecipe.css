@@ -1,12 +1,60 @@
+.DisplayRecipeMainSec{
+    width: 90%;
+    margin: 4rem auto 6rem;
+}
+
+.FilterDivWrapper{
+    width: 100%;
+    margin: 0rem auto 2rem;
+    position: relative;
+}
+
+.FilterDivWrapper li{
+    list-style: none;
+}
+
+.FilterStill{
+    display: inline-block;
+}
+
+.FilterBtn{
+    border: 0.1rem #6565d1 solid;
+    padding: 0.3rem 2rem;
+    cursor: pointer;
+    background-color: transparent;
+    border-radius: 0.4rem;
+}
+
+.FilterLinksOnlyDiv{
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    background-color: black;
+    border-radius: 0.3rem;
+}
+
+.showFilter{
+    display: block;
+}
+
+.unshowFilter{
+    display: none;
+}
+
+#EachFilterLink{
+    color: white;
+    padding: 0.3rem 0rem 0.2rem 0.3rem;
+}
 
 .DisplayRecipeMainDiv{
-    width: 90%;
-    margin:6rem auto 6rem;
+    width: 100%;
+    margin:0rem auto 6rem;
     display: flex;
     justify-content: space-between;
     row-gap: 4rem;
     flex-wrap: wrap;
 }
+
 
 .DisplayEachRecipe{
     height: 40rem;
@@ -105,7 +153,7 @@
 
 
 @media screen and (max-width:1515px){
-    .DisplayRecipeMainDiv{
+    .DisplayRecipeMainSec{
         width: 97%;
     }
 }
@@ -160,6 +208,9 @@
         height: 40rem;
         width: 47%;
     }
+    .FavIconOnRecipe{
+        display: block;
+    }
 }
 
 @media screen and (max-width:668px){
@@ -170,8 +221,13 @@
 }
 
 @media screen and (max-width:553px){
+    .DisplayRecipeMainSec{
+        margin: 3.5rem auto 5rem;
+    }
+    .FilterBtn{
+        padding: 0.25rem 1.4rem;
+    }
     .DisplayRecipeMainDiv{
-        margin:5rem auto 6rem;
         row-gap: 2rem;
     }
     .EachRecipeImageDiv{

@@ -8,7 +8,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 export function Favourite() {
 
-    const {favouriteList,HandleRemoveFav}=useContext(GlobalFetchContext)
+    const {favouriteList,HandleAddToFav}=useContext(GlobalFetchContext)
     const HandleClickOfFav=(e)=>{
         e.preventDefault()
       }
@@ -23,7 +23,7 @@ export function Favourite() {
                 alt="RecipeImage"
                 id="MainRecipeImage"
               />
-              <p onClick={HandleClickOfFav}><FontAwesomeIcon icon={faHeart} className="FavIconOnRecipe favPage" onClick={()=>HandleRemoveFav(each)}/></p>
+              <p onClick={HandleClickOfFav}><FontAwesomeIcon icon={faHeart} className="FavIconOnRecipe favPage" onClick={()=>HandleAddToFav(each)}/></p>
             </div>
             <div className="EachRecipeDetailsDiv">
               <div className="EachRecipeTopLittleDetails">
@@ -38,7 +38,7 @@ export function Favourite() {
           </Link>
         )):
             <section style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                <p style={{fontSize:"2rem"}}>No favourites</p>
+                <p style={{fontSize:"1.5rem"}}>No favourites</p>
             </section>
         }
     </section>

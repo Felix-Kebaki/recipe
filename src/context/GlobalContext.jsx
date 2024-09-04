@@ -8,8 +8,10 @@ export const GlobalContextFunction = ({ children }) => {
   const [recipe, setRecipe] = useState("");
   const [loading, setLoading] = useState(false);
   const [ifSearching, setIfSearching] = useState(false);
-  const [recipeDetails,setRecipeDetails]=useState("")
-  const [favouriteList,setFavouriteList]=useState([])
+  const [recipeDetails, setRecipeDetails] = useState("");
+  const [categories, setCategories] = useState("");
+  const [searchCat, setSearchCat] = useState("");
+  const [favouriteList, setFavouriteList] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -26,10 +28,28 @@ export const GlobalContextFunction = ({ children }) => {
     }
   };
 
+  const fetchCategoryList = async () => {
+    try {
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/categories.php`
+      );
+      const Fetcheddata = await response.json();
+      
+      if (Fetcheddata && Fetcheddata.categories) {
+        setCategories(Fetcheddata.categories);
+      }
+      
+    } catch (err) {
+      console.log(err.message);
+    }
+  };
+
   const fetchFirstLetter = async () => {
     try {
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/search.php?f=${inputSearch.charAt(0)}`
+        `https://www.themealdb.com/api/json/v1/1/search.php?f=${inputSearch.charAt(
+          0
+        )}`
       );
       const Fetcheddata = await response.json();
 
@@ -41,35 +61,60 @@ export const GlobalContextFunction = ({ children }) => {
     }
   };
 
-  const HandleInputSearch = (e) => {
-    setInputSearch(e.target.value);
-    setIfSearching(true)
+  const FetchCatSearch = async () => {
+    try {
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchCat}`
+      );
+      const Fetcheddata = await response.json();
+      
+      if (Fetcheddata && Fetcheddata.meals) {
+        setRecipe(Fetcheddata.meals);
+      }
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
-  const HandleAddToFav=(getFav)=>{
-    let cpyFavourite=[...favouriteList]
-    const index=cpyFavourite.findIndex(each=>each.idMeal===getFav.idMeal)
+  const HandleClickOnCategory=(getCategory)=>{
+    setSearchCat(getCategory)
+  }
 
-    if(index===-1){
-      cpyFavourite.push(getFav)
-    }else{
-      cpyFavourite.splice(index)
+  const HandleInputSearch = (e) => {
+    setInputSearch(e.target.value);
+    setIfSearching(true);
+  };
+
+  const HandleAddToFav = (getFav) => {
+    let cpyFavourite = [...favouriteList];
+    const index = cpyFavourite.findIndex(
+      (each) => each.idMeal === getFav.idMeal
+    );
+
+    if (index === -1) {
+      cpyFavourite.push(getFav);
+    } else {
+      cpyFavourite.splice(index);
     }
-    setFavouriteList(cpyFavourite)
-  }
-
-  const HandleRemoveFav=(get)=>{
-    
-  }
-
+    setFavouriteList(cpyFavourite);
+  };
 
   useEffect(() => {
     fetchData();
-  }, [searchParams,inputSearch]);
+  }, [searchParams, inputSearch]);
 
   useEffect(() => {
     fetchFirstLetter();
   }, [inputSearch]);
+
+  useEffect(() => {
+    FetchCatSearch();
+  }, [searchCat]);  
+
+  useEffect(() => {
+    fetchCategoryList();
+    FetchCatSearch();
+  }, []);
 
   return (
     <GlobalFetchContext.Provider
@@ -78,7 +123,6 @@ export const GlobalContextFunction = ({ children }) => {
         loading,
         HandleAddToFav,
         favouriteList,
-        HandleRemoveFav,
         setLoading,
         setInputSearch,
         inputSearch,
@@ -88,7 +132,9 @@ export const GlobalContextFunction = ({ children }) => {
         setIfSearching,
         HandleInputSearch,
         setRecipeDetails,
-        recipeDetails
+        recipeDetails,
+        categories,
+        HandleClickOnCategory,
       }}
     >
       {children}
