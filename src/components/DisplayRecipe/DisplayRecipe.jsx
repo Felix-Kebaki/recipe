@@ -7,7 +7,13 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 export function DisplayRecipe() {
-  const { recipe } = useContext(GlobalFetchContext);
+  const { recipe ,HandleAddToFav,favouriteList} = useContext(GlobalFetchContext);
+
+  const HandleClickOfFav=(e)=>{
+    e.preventDefault()
+  }
+
+ 
   return (
     <section className="DisplayRecipeMainDiv">
       {recipe &&
@@ -19,7 +25,7 @@ export function DisplayRecipe() {
                 alt="RecipeImage"
                 id="MainRecipeImage"
               />
-              <FontAwesomeIcon icon={faHeart} className="FavIconOnRecipe"/>
+              <p onClick={HandleClickOfFav}><FontAwesomeIcon icon={faHeart} className={favouriteList.findIndex(ok=>ok.idMeal===each.idMeal) !==-1 ? "FavIconOnRecipe favPage":"FavIconOnRecipe"} onClick={()=>HandleAddToFav(each)}/></p>
             </div>
             <div className="EachRecipeDetailsDiv">
               <div className="EachRecipeTopLittleDetails">

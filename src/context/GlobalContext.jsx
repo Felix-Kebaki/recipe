@@ -9,6 +9,7 @@ export const GlobalContextFunction = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [ifSearching, setIfSearching] = useState(false);
   const [recipeDetails,setRecipeDetails]=useState("")
+  const [favouriteList,setFavouriteList]=useState([])
 
   const fetchData = async () => {
     try {
@@ -45,10 +46,26 @@ export const GlobalContextFunction = ({ children }) => {
     setIfSearching(true)
   };
 
+  const HandleAddToFav=(getFav)=>{
+    let cpyFavourite=[...favouriteList]
+    const index=cpyFavourite.findIndex(each=>each.idMeal===getFav.idMeal)
+
+    if(index===-1){
+      cpyFavourite.push(getFav)
+    }else{
+      cpyFavourite.splice(index)
+    }
+    setFavouriteList(cpyFavourite)
+  }
+
+  const HandleRemoveFav=(get)=>{
+    
+  }
+
 
   useEffect(() => {
     fetchData();
-  }, [searchParams]);
+  }, [searchParams,inputSearch]);
 
   useEffect(() => {
     fetchFirstLetter();
@@ -59,6 +76,9 @@ export const GlobalContextFunction = ({ children }) => {
       value={{
         recipe,
         loading,
+        HandleAddToFav,
+        favouriteList,
+        HandleRemoveFav,
         setLoading,
         setInputSearch,
         inputSearch,

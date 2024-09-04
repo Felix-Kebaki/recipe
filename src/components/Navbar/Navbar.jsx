@@ -36,7 +36,18 @@ export function Navbar({ opened, setOpened }) {
     setInputSearch("");
     setIfSearching(false)
     navigate("/recipes");
+    const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
+    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
+    document.body.style.overflow = "auto";
+    setOpened(false);
   };
+
+  const HandleClickIconsOnNav=()=>{
+    const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
+    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
+    document.body.style.overflow = "auto";
+    setOpened(false);
+  }
 
   const HandleClickMenu = () => {
     const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
@@ -59,9 +70,14 @@ export function Navbar({ opened, setOpened }) {
     setOpened(false);
   };
 
-  const HandleSuggestionLink=()=>{
+  const HandleSuggestionLink=(ok)=>{
+    setSearchParams(ok)
     setIfSearching(false)
     setInputSearch("")
+    const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
+    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
+    document.body.style.overflow = "auto";
+    setOpened(false);
   }
 
   const HandleNavOnScroll = () => {
@@ -154,9 +170,9 @@ export function Navbar({ opened, setOpened }) {
               </div>
               <div className="SearchMenuDivWrapper">
                 <div>
-                  <Link to="/favourite"><FontAwesomeIcon icon={faHeart} id="FavouriteIcon"/></Link>
-                  <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" />
-                  <FontAwesomeIcon icon={faUser} id="UserIcon" />
+                  <Link to="/favourite"><FontAwesomeIcon icon={faHeart} id="FavouriteIcon" onClick={HandleClickIconsOnNav}/></Link>
+                  <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" onClick={HandleClickIconsOnNav}/>
+                  <FontAwesomeIcon icon={faUser} id="UserIcon" onClick={HandleClickIconsOnNav}/>
                 </div>
                 <form className="SearchForm" onSubmit={HandleFormSubmission}>
                   <input
@@ -173,7 +189,7 @@ export function Navbar({ opened, setOpened }) {
                   <div className="SuggestionDiv">
                     {ifSearching
                       ? recipe &&
-                        recipe.map((suggest) => <Link to={"/recipes"} key={suggest.idMeal} onClick={HandleSuggestionLink}>{suggest.strMeal}</Link>)
+                        recipe.map((suggest) => <Link to={"/recipes"} key={suggest.idMeal} onClick={()=>HandleSuggestionLink(suggest.strMeal)}>{suggest.strMeal}</Link>)
                       : null}
                   </div>
                 </form>

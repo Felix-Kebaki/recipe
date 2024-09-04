@@ -33,12 +33,16 @@
 
 .FavIconOnRecipe{
     position: absolute;
-    color:#6565d1;
+    color:#ddddf1;
     top: 0.5rem;
     left: 0.5rem;
     font-size: 3.5rem;
     transition: all 0.5s ease-in-out;
     display: none;
+}
+
+.favPage{
+    color: #6565d1;
 }
 
 .EachRecipeImageDiv:hover .FavIconOnRecipe{
