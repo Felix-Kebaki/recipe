@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import './favourites.css'
 
 
 export function Favourite() {
@@ -13,10 +14,10 @@ export function Favourite() {
         e.preventDefault()
       }
   return (
-    <section className="DisplayRecipeMainDiv">
+    <section className="DisplayFavMainSec">
       {favouriteList && favouriteList.length>0?
         favouriteList.map((each) => (
-          <Link to={"/recipes/"+each.idMeal} className="DisplayEachRecipe" key={each.idMeal}>
+          <Link to={"/recipes/"+each.idMeal} className="DisplayEachFav" key={each.idMeal}>
             <div className="EachRecipeImageDiv">
               <img
                 src={each.strMealThumb}

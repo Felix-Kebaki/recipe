@@ -1,0 +1,64 @@
+.DisplayFavMainSec{
+    width: 90%;
+    margin: 5rem auto 5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+}
+
+.DisplayEachFav{
+    height: 40rem;
+    width: 32%;
+    text-decoration: none;
+}
+
+@media screen and (max-width:1515px){
+    .DisplayFavMainSec{
+        width: 97%;
+    }
+}
+
+@media screen and (max-width:1160px){
+    .DisplayEachFav{
+        height: 38rem;
+    }
+}
+
+@media screen and (max-width:894px){
+    .DisplayEachFav{
+        height: 40rem;
+        width: 47%;
+    }
+}
+
+@media screen and (max-width:668px){
+    .DisplayEachFav{
+        height: 34rem;
+        width: 48%;
+    }
+}
+
+@media screen and (max-width:553px){
+    .DisplayFavMainSec{
+        margin: 3.5rem auto 5rem;
+        row-gap: 2rem;
+    }
+}
+
+
+@media screen and (max-width:493px){
+    .DisplayFavMainSec{
+        row-gap: 1rem;
+    }
+    .DisplayEachFav{
+        height: 40rem;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:388px){
+    .DisplayEachFav{
+        height: 35rem;
+    }
+}
