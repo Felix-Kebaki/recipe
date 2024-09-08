@@ -4,6 +4,7 @@ import { WhoWeAre } from '../components/WhoWeAre/WhoWeAre'
 import { ExpertChefs } from '../components/ExpertChefs/ExpertChefs'
 import { Ingredients } from '../components/Ingredients/Ingredients'
 import { OurChefs } from '../components/OurChefs/OurChefs'
+import { Testimonial } from '../components/Testimonials/Testimonial'
 
 export function Home() {
   return (
@@ -13,6 +14,7 @@ export function Home() {
         <ExpertChefs/>
         <OurChefs/>
         <Ingredients/>
+        <Testimonial/>
     </div>
   )
 }

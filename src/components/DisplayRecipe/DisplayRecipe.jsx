@@ -8,7 +8,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 export function DisplayRecipe() {
-  const { recipe ,HandleAddToFav,favouriteList,categories,HandleClickOnCategory} = useContext(GlobalFetchContext);
+  const { recipe ,HandleAddToFav,favouriteList,categories,searchCat,HandleClickOnCategory} = useContext(GlobalFetchContext);
   const [filter,setFilter]=useState(false)
 
   const HandleClickOfFav=(e)=>{
@@ -64,11 +64,11 @@ export function DisplayRecipe() {
             </div>
             <div className="EachRecipeDetailsDiv">
               <div className="EachRecipeTopLittleDetails">
-                <p className="DotNationsRecipeWrapper">
+                {each.strArea && <p className="DotNationsRecipeWrapper">
                   <FontAwesomeIcon icon={faCircle} id="RecipesCircles"/>
                   <span id="RecipeNationality">{each.strArea}</span>
-                </p>
-                <p id="CategoryRecipe">CATEGORY :<span>{each.strCategory}</span></p>
+                </p>}
+                <p id="CategoryRecipe">CATEGORY :<span>{each.strCategory?each.strCategory:searchCat}</span></p>
               </div>
               <p id="EachRecipeTittle">{each.strMeal}</p>
             </div>

@@ -1,0 +1,77 @@
+.TestimonialMainSec{
+    width:100%;
+    background: white;
+    padding:5rem 0rem 5rem 0rem;
+}
+
+.TestimonialMainDiv{
+    width: 90%;
+    margin: 0rem auto 0rem;
+}
+
+#TestimonialsTittle{
+    font-size:0.9rem;
+    text-transform: uppercase;
+    opacity:0.8;
+}
+
+.DisplayDivTestimonials{
+    display: grid;
+    margin-top: 4rem;
+    width: 100%;
+    gap: 0.5rem;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,15rem);
+}
+
+.DisplayDivTestimonials div{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.ImageOneDivTesti{
+    grid-row: 1/3;
+    overflow: hidden;
+}
+
+.ImageTwoDivTesti{
+    grid-row: 2/ 4;
+    overflow: hidden;
+    grid-area: 2/3/4/4;
+}
+
+#TestimonialPics{
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+
+#TestimonialPics:hover{
+    scale: 1.2;
+}
+
+#ActualTestimonial{
+    max-width:85%;
+    font-size:1.7rem;
+    position:relative;
+}
+
+#ActualTestimonial::before{
+    content: '"';
+    position:absolute;
+    margin-top: -8rem;
+    rotate: 180deg;
+    font-size: 6rem;
+    font-family: "Catamaran", sans-serif;
+    color: #6565d1;
+}
+
+#ActualTestimonial::after{
+    content: '"';
+    position:absolute;
+    font-size: 6rem;
+    color: #6565d1;
+    margin-top: -1rem;
+    font-family: "Catamaran", sans-serif;
+}

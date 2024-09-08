@@ -135,6 +135,7 @@ export const GlobalContextFunction = ({ children }) => {
         recipeDetails,
         categories,
         HandleClickOnCategory,
+        searchCat,
       }}
     >
       {children}
