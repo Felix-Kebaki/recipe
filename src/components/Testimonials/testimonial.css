@@ -81,3 +81,36 @@
         width: 97%;
     }
 }
+
+@media screen and (max-width:1193px){
+    #ActualTestimonial{
+        font-size:1.5rem;
+    }
+    #ActualTestimonial::before{
+        margin-top: -7rem;
+        font-size: 5.5rem;
+    }
+    
+    #ActualTestimonial::after{
+        font-size: 5.5rem;
+    }
+    
+}
+
+@media screen and (max-width:940px){
+    #ActualTestimonial{
+        max-width:95%;
+    }
+}
+
+@media screen and (max-width:880px){
+    #ActualTestimonial{
+        font-size:1.3rem;
+    }
+}
+
+@media screen and (max-width:544px){
+    #TestimonialsTittle{
+        font-size:0.8rem;
+    }
+}
