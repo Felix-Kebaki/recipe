@@ -75,3 +75,9 @@
     margin-top: -1rem;
     font-family: "Catamaran", sans-serif;
 }
+
+@media screen and (max-width:1515px){
+    .TestimonialMainDiv{
+        width: 97%;
+    }
+}

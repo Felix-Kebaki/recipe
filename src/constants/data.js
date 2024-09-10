@@ -76,6 +76,7 @@ export const QAndAnswer=[
   },
   {
     id:6,
-    question:"Yes, we welcome feedback and suggestions from our customers! Feel free to reach out with any ideas, and we’ll do our best to incorporate them"
+    question:"Do you take feedback from users",
+    answer:"Yes, we welcome feedback and suggestions from our customers! Feel free to reach out with any ideas, and we’ll do our best to incorporate them"
   },
 ]
