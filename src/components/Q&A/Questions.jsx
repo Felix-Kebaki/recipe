@@ -11,7 +11,7 @@ export function Questions() {
     }
   return (
     <section className='QuestionMainSec'>
-        <div className='QuestionMainDiv'>
+        <div className='QuestionAndAnswerMainDiv'>
             <p id="QuestionsMainTittle">Frequently Asked Questions</p>
             <div className='QuestionAndAnswerDivWrapper'>
                 {QAndAnswer &&

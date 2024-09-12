@@ -4,7 +4,7 @@
     padding: 4rem 0rem 8rem 0rem;
 }
 
-.QuestionMainDiv{
+.QuestionAndAnswerMainDiv{
     width: 90%;
     margin: 0rem auto 0rem;
 }
@@ -56,7 +56,7 @@
 }
 
 @media screen and (max-width:1515px){
-    .QuestionMainDiv{
+    .QuestionAndAnswerMainDiv{
         width: 97%;
     }
 }
@@ -100,8 +100,4 @@
     #answer{
         max-width: 90%;
     }
-}
-
-@media screen and (max-width:411px){
-    
 }
