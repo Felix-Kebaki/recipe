@@ -67,7 +67,7 @@
 
 #NewsLetterBtn {
   padding: 0.4rem 0.9rem;
-  background-color: rgb(101, 101, 209);
+  background-color: #6565d1;
   border: none;
   color: black;
   cursor: pointer;
@@ -88,7 +88,7 @@
 }
 
 #DotIcon {
-  color: rgb(101, 101, 209);
+  color: #6565d1;
   font-size: 0.7rem;
 }
 

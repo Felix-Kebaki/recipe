@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import {faEye} from '@fortawesome/free-regular-svg-icons'
 import Blog1 from "../../assets/images/coupleDinnerBlog.jpeg";
+import Subcribe from '../../assets/images/subscribe.jpeg'
 
 export function MainBlog() {
   return (
@@ -14,6 +15,7 @@ export function MainBlog() {
         <div className="BlogMainImageWrapper">
           <img src={MainBlogImg} alt="" />
         </div>
+        <p className="WelcomingBlogPage">Welcome to our blog, where we explore culinary tips, recipe inspiration, and cooking techniques. Discover expert advice, seasonal ingredient highlights, and creative ways to elevate your meals. Whether you’re a beginner or seasoned cook, our blog will inspire your next delicious dish.</p>
         <div className="SmallPartAtBlogDiv">
           <div className="SubscribeMarginDiv">
             <p id="StayLoopBlogTittle">Stay in the loop</p>
@@ -22,6 +24,9 @@ export function MainBlog() {
               <input type="text" placeholder="Email Address..."/>
               <button>subscribe</button>
             </div>
+          </div>
+          <div className="SubscribeImageWrapper">
+            <img src={Subcribe} alt="" />
           </div>
         </div>
         <div className="BlogDispalyDiv">

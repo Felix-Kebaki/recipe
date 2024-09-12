@@ -17,7 +17,7 @@
 .BlogMainImageWrapper{
     width:90%;
     height: 32rem;
-    margin: 3rem auto 0rem;
+    margin: 2rem auto 0rem;
     overflow:hidden;
     border-radius: 1rem;
 }
@@ -32,17 +32,35 @@
     scale:1.2;
 }
 
+.WelcomingBlogPage{
+    font-size:2rem;
+    max-width:60%;
+    margin-top: 3rem;
+}
+
 .SmallPartAtBlogDiv{
     width: 90%;
     margin:4rem auto 0rem;
     background:#ddddf1;
+    display:flex;
+    justify-content: space-between;
     border-radius:1rem;
-    padding:4rem 0rem 4rem 0rem;
+    padding:3rem 1.5rem 3rem 1.5rem;
 }
 
 .SubscribeMarginDiv{
-    width:90rem;
-    margin:0rem auto 0rem;
+    width:70%;
+}
+
+
+.SubscribeImageWrapper{
+    height: 10rem;
+    width: 30%;
+}
+
+.SubscribeImageWrapper img{
+    height: 100%;
+    width: 100%;
 }
 
 #StayLoopBlogTittle{
@@ -53,13 +71,13 @@
 #StayLoopBlogDescr{
     margin:0.4rem 0rem 0.4rem 0rem;
     font-size:1.3rem;
-    max-width:30%;
+    max-width:45%;
 }
 
 .SubscribeInBlogDiv{
     position: relative;
     width: 20rem;
-    margin-top: 0.4rem;
+    margin-top: 0.6rem;
 }
 
 .SubscribeInBlogDiv input{
@@ -68,7 +86,7 @@
     background:transparent;
     outline: none;
     border: none;
-    border-bottom: black solid 0.1rem;
+    border-bottom: black dashed 0.12rem;
 }
 
 .SubscribeInBlogDiv button{
