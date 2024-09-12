@@ -1,0 +1,362 @@
+.MainBlogMainSec{
+    padding: 4rem 0rem 5rem 0rem;
+    background: white;
+    width:100%;
+}
+
+.MainBlogMainDiv{
+    width: 90%;
+    margin: 0rem auto 0rem;
+}
+
+#MainBlogTittle{
+    text-align: center;
+    font-size:8rem;
+}
+
+.BlogMainImageWrapper{
+    width:90%;
+    height: 32rem;
+    margin: 3rem auto 0rem;
+    overflow:hidden;
+    border-radius: 1rem;
+}
+
+.BlogMainImageWrapper img{
+    width:100%;
+    height: 100%;
+    transition:all 0.5s ease-in-out;
+}
+
+.BlogMainImageWrapper img:hover{
+    scale:1.2;
+}
+
+.SmallPartAtBlogDiv{
+    width: 90%;
+    margin:4rem auto 0rem;
+    background:#ddddf1;
+    border-radius:1rem;
+    padding:4rem 0rem 4rem 0rem;
+}
+
+.SubscribeMarginDiv{
+    width:90rem;
+    margin:0rem auto 0rem;
+}
+
+#StayLoopBlogTittle{
+    font-size:2rem;
+    font-weight: bolder;
+}
+
+#StayLoopBlogDescr{
+    margin:0.4rem 0rem 0.4rem 0rem;
+    font-size:1.3rem;
+    max-width:30%;
+}
+
+.SubscribeInBlogDiv{
+    position: relative;
+    width: 20rem;
+    margin-top: 0.4rem;
+}
+
+.SubscribeInBlogDiv input{
+    width:100%;
+    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
+    background:transparent;
+    outline: none;
+    border: none;
+    border-bottom: black solid 0.1rem;
+}
+
+.SubscribeInBlogDiv button{
+    position: absolute;
+    right: 0;
+    font-size: 1rem;
+    color: #6565d1;
+    border:none;
+    background:transparent;
+    cursor:pointer;
+}
+
+.BlogDispalyDiv{
+    display: grid;
+    margin-top:5rem;
+    grid-gap:0.7rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(7,15rem);
+    grid-template-areas:
+    "EachBlog1 EachBlog2 EachBlog3"
+    "EachBlog1 EachBlog2 EachBlog3"
+    "EachBlog1 EachBlog2 EachBlog3"
+    "EachBlog1 EachBlog5 EachBlog3"
+    "EachBlog4 EachBlog5 EachBlog6"
+    "EachBlog4 EachBlog5 EachBlog6"
+    "EachBlog4 EachBlog EachBlog6"
+    ;
+    width:100%;
+}
+
+.EachBlog1{
+    grid-area: EachBlog1;
+}
+
+.EachBlog2{
+    grid-area: EachBlog2;
+}
+
+.EachBlog3{
+    grid-area: EachBlog3;
+}
+
+.EachBlog4{
+    grid-area: EachBlog4;
+}
+
+.EachBlog5{
+    grid-area: EachBlog5;
+}
+
+.EachBlog6{
+    grid-area: EachBlog6;
+}
+
+.ImageWrapperEachBlog{
+    overflow: hidden;
+    height: 80%;
+}
+
+#BlogEachPic{
+    width: 100%;
+    height: 100%;
+    transition:all 0.5s ease-in-out;
+}
+
+#BlogEachPic:hover{
+    scale:1.2;
+}
+
+#BlogLittleTittle{
+    margin-top:0.5rem;
+    text-transform:uppercase;
+    font-size:1.4rem;
+}
+
+#BlogDescription{
+    max-width:90%;
+    margin-top:0.5rem;
+}
+
+.ButtonDateDiv{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:100%;
+    margin:0.3rem auto 0rem;
+}
+
+.ButtonDateDiv button{
+    padding: 0.4rem 1rem;
+    border:none;
+    cursor:pointer;
+    background:#6565d1;
+    font-size: 0.9rem;
+}
+
+.DotDateDiv{
+    display:flex;
+    column-gap:0.3rem;
+    align-items:center;
+}
+
+#BlogCircles{
+    font-size: 0.5rem;
+    color: #6565d1;
+}
+
+@media screen and (max-width:1515px){
+    .MainBlogMainDiv{
+        width: 97%;
+    }
+}
+
+@media screen and (max-width:1456px){
+    #MainBlogTittle{
+        font-size:7.6rem;
+    }
+}
+
+@media screen and (max-width:1320px){
+    #MainBlogTittle{
+        font-size:7rem;
+    }
+    
+    .BlogMainImageWrapper{
+        height: 29rem;
+        margin: 2.5rem auto 0rem;
+        border-radius: 1.7rem;
+    }
+}
+
+@media screen and (max-width:1193px){
+    .BlogDispalyDiv{
+        margin-top:4rem;
+    }
+    .ImageWrapperEachBlog{
+        height: 75%;
+    }
+}
+
+@media screen and (max-width:1102px){
+    #BlogLittleTittle{
+        font-size:1.3rem;
+    }
+}
+
+@media screen and (max-width:1182px){
+    #MainBlogTittle{
+        font-size:6rem;
+    }
+}
+
+@media screen and (max-width:1063px){
+    #MainBlogTittle{
+        font-size:5rem;
+    }
+}
+
+@media screen and (max-width:1027px){
+    #BlogLittleTittle{
+        font-size:1.2rem;
+    }
+    #BlogDescription{
+        max-width:100%;
+    }
+    
+}
+@media screen and (max-width:1011px){
+    .BlogDispalyDiv{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(11,15rem);
+        grid-template-areas:
+        "EachBlog1 EachBlog2"
+        "EachBlog1 EachBlog2"
+        "EachBlog1 EachBlog2"
+        "EachBlog1 EachBlog4"
+        "EachBlog3 EachBlog4"
+        "EachBlog3 EachBlog4"
+        "EachBlog3 EachBlog6"
+        "EachBlog5 EachBlog6"
+        "EachBlog5 EachBlog6"
+        "EachBlog5 EachBlog6"
+        "EachBlog5 EachBlog"
+        ;
+    }
+    .ImageWrapperEachBlog{
+        height: 80%;
+    }
+}
+
+@media screen and (max-width:900px){
+    #MainBlogTittle{
+        font-size:4rem;
+    }
+    .BlogMainImageWrapper{
+        height: 23rem;
+        margin: 2rem auto 0rem;
+        border-radius: 1.7rem;
+    }
+}
+
+@media screen and (max-width:767px){
+    .ImageWrapperEachBlog{
+        height: 75%;
+    }
+}
+
+@media screen and (max-width:709px){
+    #MainBlogTittle{
+        font-size:3rem;
+    }
+}
+
+@media screen and (max-width:544px){
+    #MainBlogTittle{
+        font-size:2.3rem;
+    }
+    .BlogMainImageWrapper{
+        height: 18rem;
+        width: 100%;
+        margin: 2rem auto 0rem;
+    }
+    .BlogDispalyDiv{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(22,12rem);
+        grid-template-areas:
+        "EachBlog1 "
+        "EachBlog1 "
+        "EachBlog1 "
+        "EachBlog1 "
+        "EachBlog2 "
+        "EachBlog2 "
+        "EachBlog2 "
+        "EachBlog3 "
+        "EachBlog3 "
+        "EachBlog3 "
+        "EachBlog3 "
+        "EachBlog4 "
+        "EachBlog4 "
+        "EachBlog4 "
+        "EachBlog5 "
+        "EachBlog5"
+        "EachBlog5"
+        "EachBlog5"
+        "EachBlog6"
+        "EachBlog6"
+        "EachBlog6"
+        "EachBlog6"
+        ;
+    }
+    .ImageWrapperEachBlog{
+        height: 75%;
+    }
+}
+
+@media screen and (max-width:378px){
+    #MainBlogTittle{
+        font-size:1.7rem;
+    } 
+    .BlogMainImageWrapper{
+        height: 18rem;
+        margin: 1.4rem auto 0rem;
+        border-radius: 1rem;
+    }
+}
+
+@media screen and (max-width:346px){
+
+    #BlogLittleTittle{
+        font-size:1.1rem;
+    }
+    .BlogDispalyDiv{
+        grid-template-rows: repeat(22,15rem);
+    }
+
+    #BlogDescription{
+        max-width:100%;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:274px){
+    #MainBlogTittle{
+        font-size:1.4rem;
+    } 
+    .BlogMainImageWrapper{
+        height: 14rem;
+        margin: 1rem auto 0rem;
+        border-radius: 0.8rem;
+    }
+}

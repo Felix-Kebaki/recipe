@@ -20,11 +20,11 @@ export function Footer() {
           <div className="QuickLinksDiv">
             <p className="QuickLinksTittle">Quick links</p>
             <div className="ActualLinksFooter">
-              <p><Link to="/recipe/home">Home</Link></p>
-              <p><Link to="/recipe/about us">About us</Link></p>
-              <p><Link to="/recipe/recipes">Recipes</Link></p>
-              <p><Link to="/recipe/blog">Blog</Link></p>
-              <p><Link to="/recipe/contact">Contact</Link></p>
+              <p><Link to="/recipe">Home</Link></p>
+              <p><Link to="/recipes">Recipes</Link></p>
+              <p><Link to="/blog">Blog</Link></p>
+              <p><Link to="/shop">Shop</Link></p>
+              <p><Link to="/contact">Contact</Link></p>
             </div>
           </div>
           <div className="NewLetterDiv">

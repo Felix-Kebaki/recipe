@@ -4,6 +4,9 @@ import Chef3 from "../assets/images/chef3.jpeg";
 import Chef4 from "../assets/images/chef4.jpeg";
 import Chef5 from "../assets/images/chef5.jpeg";
 
+
+
+
 export const ChefsDetails = [
   {
     id: 1,
@@ -80,3 +83,5 @@ export const QAndAnswer=[
     answer:"Yes, we welcome feedback and suggestions from our customers! Feel free to reach out with any ideas, and we’ll do our best to incorporate them"
   },
 ]
+
+
