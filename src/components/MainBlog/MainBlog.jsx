@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import {faEye} from '@fortawesome/free-regular-svg-icons'
 import Blog1 from "../../assets/images/coupleDinnerBlog.jpeg";
-import Subcribe from '../../assets/images/subscribe.jpeg'
+import Subcribe from '../../assets/images/subscribe.png'
+import MistakeBlog from '../../assets/images/MistakeBlog.jpeg'
 
 export function MainBlog() {
   return (
@@ -67,7 +68,7 @@ export function MainBlog() {
           </div>
           <div className="EachBlog3">
             <div className="ImageWrapperEachBlog">
-              <img src={Blog1} id="BlogEachPic" />
+              <img src={MistakeBlog} id="BlogEachPic" />
             </div>
             <p id="BlogLittleTittle">10 Cooking Mistakes You Didn’t Know You Were Making</p>
             <p id="BlogDescription">
