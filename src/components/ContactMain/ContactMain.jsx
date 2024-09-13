@@ -21,8 +21,8 @@ export function ContactMain() {
               <input type="text" placeholder="Phone Number" />
             </div>
             <div>
-              <input type="text" placeholder="Message" />
-              <button type="submit">Submit</button>
+              <input type="text" placeholder="Message"/>
+             <button type="submit">Submit</button>
             </div>
           </form>
           

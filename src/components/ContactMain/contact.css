@@ -53,6 +53,7 @@
     background: transparent;
 }
 
+
 .ContactFormWrapper form div button{
     padding: 0.4rem 2rem;
     background: transparent;
@@ -111,4 +112,47 @@
     right:0;
     height:0.08rem;
     background:black;
+}
+
+@media screen and (max-width:1515px){
+    .ContactMainDiv{
+        width:97%;
+    }
+}
+
+@media screen and (max-width:1034px){
+    .QuestionMainDiv p{
+        font-size:1.5rem;
+    }
+    .ContactFormWrapper{
+        row-gap: 3.5rem;
+    }
+}
+
+@media screen and (max-width:761px){
+    .ContactMainSec{
+        padding:5rem 0rem 0rem 0rem;
+    }
+    
+    .QuestionMainDiv{
+        width:100%;
+    }
+
+    .ContactMainDiv{
+        flex-direction: column;
+    }
+    .ContactFormWrapper{
+        width:100%;
+        justify-content: start;
+        padding-top: 4rem;
+        align-items: start;
+    }
+    
+    .ContactFormWrapper form div input{
+        width: 50%;
+    }
+
+    .ConnectMainDiv{
+        width: 100%;
+    }
 }
