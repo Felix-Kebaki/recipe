@@ -36,14 +36,14 @@
 .EachChefDiv:nth-of-type(odd){
     min-width: 40%;
     height: 50rem;
-    cursor: pointer;
+    cursor:grab;
     z-index: 2;
 }
 
 .EachChefDiv:nth-of-type(even){
     height: 37rem; 
     min-width: 40%;
-    cursor: pointer;
+    cursor:grab;
     z-index: 2;
 }
 

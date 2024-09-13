@@ -5,7 +5,7 @@ import Chef4 from "../assets/images/chef4.jpeg";
 import Chef5 from "../assets/images/chef5.jpeg";
 
 
-
+import TopBlog1 from "../assets/images/BlogMain.jpeg"
 
 export const ChefsDetails = [
   {
@@ -82,6 +82,28 @@ export const QAndAnswer=[
     question:"Do you take feedback from users",
     answer:"Yes, we welcome feedback and suggestions from our customers! Feel free to reach out with any ideas, and we’ll do our best to incorporate them"
   },
+]
+
+
+export const BlogConstants=[
+  {
+    id:1,
+    image:TopBlog1,
+    title:"Happy Family",
+    description:"Take a look at our recipes and you will stick to us after seeing the smiles on your family faces"
+  },
+  {
+    id:2,
+    image:Chef3,
+    title:"Happy Family",
+    description:"Take a look at our recipes and you will stick to us after seeing the smiles on your family faces"
+  },
+  {
+    id:3,
+    image:Chef5,
+    title:"Happy Family",
+    description:"Take a look at our recipes and you will stick to us after seeing the smiles on your family faces"
+  }
 ]
 
 

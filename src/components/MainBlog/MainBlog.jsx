@@ -4,9 +4,23 @@ import MainBlogImg from "../../assets/images/BlogMain.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import {faEye} from '@fortawesome/free-regular-svg-icons'
-import Blog1 from "../../assets/images/coupleDinnerBlog.jpeg";
+import Blog1 from "../../assets/images/EssentialBlog.png";
+import Blog4 from "../../assets/images/BakingBlog.png";
 import Subcribe from '../../assets/images/subscribe.png'
-import MistakeBlog from '../../assets/images/MistakeBlog.jpeg'
+import Blog3 from '../../assets/images/MistakeBlog.jpeg'
+import Blog2 from '../../assets/images/HealthyBlog.png'
+import Blog5 from '../../assets/images/coupleDinnerBlog.jpeg'
+import Blog6 from '../../assets/images/glomourBlog.png'
+
+
+import { BlogConstants } from "../../constants/data";
+import { Swiper,SwiperSlide } from "swiper/react";
+import 'swiper/css'
+import 'swiper/css/effect-coverflow'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+
+import { EffectCoverflow,Navigation,Pagination } from "swiper/modules";
 
 export function MainBlog() {
   return (
@@ -14,7 +28,30 @@ export function MainBlog() {
       <div className="MainBlogMainDiv">
         <p id="MainBlogTittle">Delicious Inspirations</p>
         <div className="BlogMainImageWrapper">
+          <Swiper
+            effect={'coverflow'}
+            grabCursor={true}
+            loop={true}
+            centeredSlides={true}
+            slidesPerView={'auto'}
+            coverflowEffect={{
+              rotate:0,
+              stretch:0,
+              depth:100,
+              modifier:2.5
+            }}
+          >
+            {BlogConstants && 
+              BlogConstants.map((slide)=>(
+                <SwiperSlide key={slide.id}>
+                  <div>
+                    <img src={slide.image} alt="" />
+                  </div>
+                </SwiperSlide>
+              ))
+            }
           <img src={MainBlogImg} alt="" />
+          </Swiper>
         </div>
         <p className="WelcomingBlogPage">Welcome to our blog, where we explore culinary tips, recipe inspiration, and cooking techniques. Discover expert advice, seasonal ingredient highlights, and creative ways to elevate your meals. Whether you’re a beginner or seasoned cook, our blog will inspire your next delicious dish.</p>
         <div className="SmallPartAtBlogDiv">
@@ -51,7 +88,7 @@ export function MainBlog() {
           </div>
           <div className="EachBlog2">
             <div className="ImageWrapperEachBlog">
-              <img src={Blog1} id="BlogEachPic" />
+              <img src={Blog2} id="BlogEachPic" />
             </div>
             <p id="BlogLittleTittle">Quick and Healthy Weeknight Meals for Busy Families</p>
             <p id="BlogDescription">
@@ -68,7 +105,7 @@ export function MainBlog() {
           </div>
           <div className="EachBlog3">
             <div className="ImageWrapperEachBlog">
-              <img src={MistakeBlog} id="BlogEachPic" />
+              <img src={Blog3} id="BlogEachPic" />
             </div>
             <p id="BlogLittleTittle">10 Cooking Mistakes You Didn’t Know You Were Making</p>
             <p id="BlogDescription">
@@ -85,12 +122,10 @@ export function MainBlog() {
           </div>
           <div className="EachBlog4">
             <div className="ImageWrapperEachBlog">
-              <img src={Blog1} id="BlogEachPic" />
+              <img src={Blog4} id="BlogEachPic" />
             </div>
-            <p id="BlogLittleTittle">5 Simple Ingredients to Elevate Any Dish</p>
-            <p id="BlogDescription">
-              Discover how to take your meals from basic to gourmet with just
-              five key ingredients.
+            <p id="BlogLittleTittle">The Best Baking Tips for Flawless Cakes and Pastries</p>
+            <p id="BlogDescription">Elevate your baking skills with our foolproof tips for perfect cakes and pastries
             </p>
             <div className="ButtonDateDiv">
               <button>Read {""}{""} <FontAwesomeIcon icon={faEye} /></button>
@@ -102,12 +137,11 @@ export function MainBlog() {
           </div>
           <div className="EachBlog5">
             <div className="ImageWrapperEachBlog">
-              <img src={Blog1} id="BlogEachPic" />
+              <img src={Blog5} id="BlogEachPic" />
             </div>
-            <p id="BlogLittleTittle">Quick and Healthy Weeknight Meals for Busy Families</p>
+            <p id="BlogLittleTittle">Cooking for Two: Romantic Dinner Recipes</p>
             <p id="BlogDescription">
-              Easy, nutritious dinners that you can prepare in under 30 minutes,
-              perfect for hectic schedules.
+            Perfect meal ideas for a cozy, romantic night in with your partner.
             </p>
             <div className="ButtonDateDiv">
               <button>Read {""}{""} <FontAwesomeIcon icon={faEye} /></button>
@@ -119,12 +153,11 @@ export function MainBlog() {
           </div>
           <div className="EachBlog6">
             <div className="ImageWrapperEachBlog">
-              <img src={Blog1} id="BlogEachPic" />
+              <img src={Blog6} id="BlogEachPic" />
             </div>
-            <p id="BlogLittleTittle">10 Cooking Mistakes You Didn’t Know You Were Making</p>
+            <p id="BlogLittleTittle">How to Create Gourmet Meals on a Budget</p>
             <p id="BlogDescription">
-              Avoid these common kitchen blunders and improve your cooking
-              instantly.
+            Learn how to make gourmet meals at home without breaking the bank.
             </p>
             <div className="ButtonDateDiv">
               <button>Read {""}{""} <FontAwesomeIcon icon={faEye} /></button>

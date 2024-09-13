@@ -15,21 +15,22 @@
 }
 
 .BlogMainImageWrapper{
-    width:90%;
+    width:100%;
     height: 32rem;
-    margin: 2rem auto 0rem;
-    overflow:hidden;
-    border-radius: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    background-color: red;
 }
 
-.BlogMainImageWrapper img{
+.BlogMainImageWrapper div{
+    width: 100%;
+    height: 100%;
+}
+
+.BlogMainImageWrapper div img{
     width:100%;
     height: 100%;
     transition:all 0.5s ease-in-out;
-}
-
-.BlogMainImageWrapper img:hover{
-    scale:1.2;
 }
 
 .WelcomingBlogPage{

@@ -178,7 +178,7 @@ export function Navbar({ opened, setOpened }) {
                   <input
                     type="text"
                     autoComplete="off"
-                    placeholder="search..."
+                    placeholder="search recipe..."
                     value={inputSearch}
                     onChange={HandleInputSearch}
                     id="searchInput"
