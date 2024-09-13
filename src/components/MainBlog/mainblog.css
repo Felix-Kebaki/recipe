@@ -19,16 +19,13 @@
     height: 32rem;
     margin-top: 2rem;
     display: flex;
-    background-color: red;
+    overflow: auto;
 }
 
-.BlogMainImageWrapper div{
-    width: 100%;
-    height: 100%;
-}
 
-.BlogMainImageWrapper div img{
-    width:100%;
+.BlogMainImageWrapper img{
+    width:90%;
+    margin: 0rem auto 0rem;
     height: 100%;
     transition:all 0.5s ease-in-out;
 }

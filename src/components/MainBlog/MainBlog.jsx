@@ -43,10 +43,8 @@ export function MainBlog() {
           >
             {BlogConstants && 
               BlogConstants.map((slide)=>(
-                <SwiperSlide key={slide.id}>
-                  <div>
+                <SwiperSlide key={slide.id} style={{width:"80%",margin:"0rem auto 0rem"}}>
                     <img src={slide.image} alt="" />
-                  </div>
                 </SwiperSlide>
               ))
             }

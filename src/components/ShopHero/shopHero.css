@@ -23,6 +23,7 @@
 
 #ShopHeroMainWordings{
     font-size:4.5rem;
+    color: #ddddf1;
     padding-left: 1rem;
 }
 
@@ -62,4 +63,106 @@
 .ShopHeroImageWrapper img{
     width: 100%;
     height:100%;
+}
+
+
+@media screen and (max-width:1515px){
+    .ShopHeroMainDiv{
+        width:98%;
+    }
+}
+
+@media screen and (max-width:1446px){
+    #ShopHeroMainWordings{
+        font-size:4rem;
+        padding-left: 0.6rem;
+    }
+}
+
+@media screen and (max-width:1277px){
+    #ShopHeroMainWordings{
+        font-size:3.6rem;
+        padding-left: 0.6rem;
+    }
+    #ShopHeroMainBtn{
+        font-size:1.1rem;
+        margin: 2rem 0rem 0rem 0.6rem;
+    }
+}
+
+
+@media screen and (max-width:1194px){
+    .ShopHeroMainDiv{
+        width:100%;
+    }
+    .ShopHeroMainDiv{
+        flex-direction: column-reverse;
+        justify-content: start;
+        align-items: start;
+    }
+    .ShopHeroMainWordingsDiv{
+        width: 100%;
+    }
+    .ShopHeroImageWrapper{
+        width:100%;
+        height: 35rem;
+    }
+    #ShopHeroMainWordings{
+        font-size:4.5rem;
+        padding: 3rem 0rem 0rem 0.6rem;
+    }
+    #ShopHeroMainBtn{
+        font-size:1.2rem;
+        margin-bottom: 3rem;
+    }
+}
+
+@media screen and (max-width:914px){
+    #ShopHeroMainWordings{
+        font-size:4rem;
+    }
+}
+
+@media screen and (max-width:754px){
+    #ShopHeroMainWordings{
+        font-size:3.6rem;
+    }
+    #ShopHeroMainBtn{
+        font-size:1.1rem;
+    }
+}
+
+@media screen and (max-width:587px){
+    #ShopHeroMainWordings{
+        font-size:3.3rem;
+    }
+}
+
+@media screen and (max-width:532px){
+    #ShopHeroMainWordings{
+        font-size:2.8rem;
+        padding: 1.5rem 0rem 0rem 0.3rem;
+    }
+    #ShopHeroMainBtn{
+        margin: 2rem 0rem  1.5rem 0.3rem;
+        padding: 0.4rem 1.7rem;
+    }
+}
+
+@media screen and (max-width:452px){
+    #ShopHeroMainWordings{
+        font-size:2.3rem;
+    }
+}
+
+@media screen and (max-width:376px){
+    #ShopHeroMainWordings{
+        font-size:2rem;
+    }
+}
+
+@media screen and (max-width:327px){
+    #ShopHeroMainWordings{
+        font-size:1.7rem;
+    }
 }
