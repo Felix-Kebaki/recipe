@@ -295,7 +295,7 @@
 
 @media screen and (max-width: 1515px) {
   .HeroWrapperDiv {
-    width: 97%;
+    width: 98%;
   }
   .HeroMainWords {
     padding-top: 5rem;
@@ -471,7 +471,7 @@
     height: auto;
   }
   .HeroWrapperDiv {
-    width: 90%;
+    width: 98%;
     flex-direction: column;
     justify-content: space-between;
   }

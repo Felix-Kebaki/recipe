@@ -16,18 +16,38 @@
 
 .BlogMainImageWrapper{
     width:100%;
-    height: 32rem;
+    height: 36rem;
     margin-top: 2rem;
-    display: flex;
-    overflow: auto;
+    position:relative;
 }
 
 
 .BlogMainImageWrapper img{
-    width:90%;
+    width:100%;
     margin: 0rem auto 0rem;
     height: 100%;
+    border-radius:1rem;
     transition:all 0.5s ease-in-out;
+}
+
+.BlogTopWordOnPicDiv{
+    background: linear-gradient(#6565d1cb,#ddddf1b2);
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    border-radius:1rem;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.BlogTopWordOnPicDiv p{
+    font-size:3.5rem;
+    color:black;
+    margin: 0rem 0.4rem 1.5rem 0rem;
+    font-weight: bolder;
 }
 
 .WelcomingBlogPage{
@@ -47,13 +67,13 @@
 }
 
 .SubscribeMarginDiv{
-    width:70%;
+    width:65%;
 }
 
 
 .SubscribeImageWrapper{
     height: 10rem;
-    width: 30%;
+    width: 35%;
 }
 
 .SubscribeImageWrapper img{
@@ -194,7 +214,7 @@
 
 @media screen and (max-width:1515px){
     .MainBlogMainDiv{
-        width: 97%;
+        width: 98%;
     }
 }
 
@@ -202,6 +222,13 @@
     #MainBlogTittle{
         font-size:7.6rem;
     }
+}
+
+@media screen and (max-width:1394px){
+    .WelcomingBlogPage{
+        max-width:70%;
+    }
+    
 }
 
 @media screen and (max-width:1320px){
@@ -222,6 +249,15 @@
     }
     .ImageWrapperEachBlog{
         height: 75%;
+    }
+    .BlogTopWordOnPicDiv p{
+        font-size:3rem;
+        margin: 0rem 0.4rem 0.9rem 0rem;
+    }
+    .WelcomingBlogPage{
+        font-size:1.8rem;
+        max-width:75%;
+        margin-top: 2.7rem;
     }
 }
 
@@ -286,6 +322,18 @@
     }
 }
 
+@media screen and (max-width:791px){
+    .BlogTopWordOnPicDiv p{
+        font-size:2.3rem;
+        margin: 0rem 0.4rem 0.5rem 0rem;
+    }
+    .WelcomingBlogPage{
+        font-size:1.5rem;
+        max-width:80%;
+        margin-top: 2.4rem;
+    }
+}
+
 @media screen and (max-width:767px){
     .ImageWrapperEachBlog{
         height: 75%;
@@ -301,6 +349,13 @@
 @media screen and (max-width:544px){
     #MainBlogTittle{
         font-size:2.3rem;
+    }
+    .BlogTopWordOnPicDiv p{
+        font-size:1.6rem;
+    }
+    .WelcomingBlogPage{
+        font-size:1.5rem;
+        max-width:100%;
     }
     .BlogMainImageWrapper{
         height: 18rem;
@@ -340,6 +395,12 @@
     }
 }
 
+@media screen and (max-width:391px){
+    .BlogTopWordOnPicDiv p{
+        font-size:1.4rem;
+    }
+}
+
 @media screen and (max-width:378px){
     #MainBlogTittle{
         font-size:1.7rem;
@@ -348,6 +409,12 @@
         height: 18rem;
         margin: 1.4rem auto 0rem;
         border-radius: 1rem;
+    }
+}
+
+@media screen and (max-width:352px){
+    .WelcomingBlogPage{
+        font-size:1.3rem;
     }
 }
 
@@ -366,6 +433,12 @@
     }
 }
 
+@media screen and (max-width:290px){
+    .BlogTopWordOnPicDiv p{
+        font-size:1.3rem;
+    }
+}
+
 @media screen and (max-width:274px){
     #MainBlogTittle{
         font-size:1.4rem;
@@ -374,5 +447,11 @@
         height: 14rem;
         margin: 1rem auto 0rem;
         border-radius: 0.8rem;
+    }
+}
+
+@media screen and (max-width:227px){
+    .BlogTopWordOnPicDiv p{
+        font-size:1.1rem;
     }
 }

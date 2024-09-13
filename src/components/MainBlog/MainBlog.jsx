@@ -13,43 +13,16 @@ import Blog5 from '../../assets/images/coupleDinnerBlog.jpeg'
 import Blog6 from '../../assets/images/glomourBlog.png'
 
 
-import { BlogConstants } from "../../constants/data";
-import { Swiper,SwiperSlide } from "swiper/react";
-import 'swiper/css'
-import 'swiper/css/effect-coverflow'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-
-import { EffectCoverflow,Navigation,Pagination } from "swiper/modules";
-
 export function MainBlog() {
   return (
     <section className="MainBlogMainSec">
       <div className="MainBlogMainDiv">
         <p id="MainBlogTittle">Delicious Inspirations</p>
         <div className="BlogMainImageWrapper">
-          <Swiper
-            effect={'coverflow'}
-            grabCursor={true}
-            loop={true}
-            centeredSlides={true}
-            slidesPerView={'auto'}
-            coverflowEffect={{
-              rotate:0,
-              stretch:0,
-              depth:100,
-              modifier:2.5
-            }}
-          >
-            {BlogConstants && 
-              BlogConstants.map((slide)=>(
-                <SwiperSlide key={slide.id} style={{width:"80%",margin:"0rem auto 0rem"}}>
-                    <img src={slide.image} alt="" />
-                </SwiperSlide>
-              ))
-            }
           <img src={MainBlogImg} alt="" />
-          </Swiper>
+          <div className="BlogTopWordOnPicDiv">
+            <p>Stay Informed and <br/>make you family happy</p>
+          </div>
         </div>
         <p className="WelcomingBlogPage">Welcome to our blog, where we explore culinary tips, recipe inspiration, and cooking techniques. Discover expert advice, seasonal ingredient highlights, and creative ways to elevate your meals. Whether you’re a beginner or seasoned cook, our blog will inspire your next delicious dish.</p>
         <div className="SmallPartAtBlogDiv">
