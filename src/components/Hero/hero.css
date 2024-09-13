@@ -141,9 +141,32 @@
   padding: 0.6rem 1rem;
   border: none;
   color: white;
-  background-color: rgb(101, 101, 209);
-  border-radius: 0.3rem;
+  background-color: transparent;
+  border: 0.1rem solid #6565d1;
   cursor: pointer;
+  z-index:1;
+  position:relative;
+  transition: all 0.1s ease-in-out;
+}
+
+.SmallWordsDiv div a::after{
+  content:"";
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background:#6565d1;
+  z-index:-1;
+  transition: all 0.1s ease-in-out;
+}
+
+.SmallWordsDiv div a:hover{
+  color: black;
+}
+
+.SmallWordsDiv div a:hover::after{
+  transform: scale(1,0);
 }
 
 .SliderContentOnHeroDiv {
@@ -253,19 +276,7 @@
 #LinkAtSlider {
   margin-left: 0.5rem;
 }
-/* .HistorySection{
-    width: 100%;
-    height: 50%;
-}
 
-#HistoryTittle{
-    font-size: 1.4rem;
-    text-align: center;
-}
-
-.HistorySection div{
-    margin-top: 1rem;
-} */
 
 @media screen and (max-width: 1810px) {
   .SmallWordsDiv .SmallTittlesDiv {

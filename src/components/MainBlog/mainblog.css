@@ -59,7 +59,7 @@
 .SmallPartAtBlogDiv{
     width: 90%;
     margin:4rem auto 0rem;
-    background:#ddddf1;
+    background:#6565d1;
     display:flex;
     justify-content: space-between;
     border-radius:1rem;
@@ -89,7 +89,7 @@
 #StayLoopBlogDescr{
     margin:0.4rem 0rem 0.4rem 0rem;
     font-size:1.3rem;
-    max-width:45%;
+    max-width:49%;
 }
 
 .SubscribeInBlogDiv{
@@ -103,6 +103,7 @@
     padding: 0.2rem 0.4rem 0.2rem 0.4rem;
     background:transparent;
     outline: none;
+    color: #ddddf1;
     border: none;
     border-bottom: black dashed 0.12rem;
 }
@@ -111,7 +112,7 @@
     position: absolute;
     right: 0;
     font-size: 1rem;
-    color: #6565d1;
+    color: #ddddf1;
     border:none;
     background:transparent;
     cursor:pointer;
@@ -212,6 +213,12 @@
     color: #6565d1;
 }
 
+@media screen and (max-width:1570px){
+    #StayLoopBlogDescr{
+        max-width:52%;
+    }
+}
+
 @media screen and (max-width:1515px){
     .MainBlogMainDiv{
         width: 98%;
@@ -231,6 +238,12 @@
     
 }
 
+@media screen and (max-width:1366px){
+    #StayLoopBlogDescr{
+        max-width:60%;
+    }
+}
+
 @media screen and (max-width:1320px){
     #MainBlogTittle{
         font-size:7rem;
@@ -240,6 +253,12 @@
         height: 29rem;
         margin: 2.5rem auto 0rem;
         border-radius: 1.7rem;
+    }
+}
+
+@media screen and (max-width:1195px){
+    #StayLoopBlogDescr{
+        max-width:67%;
     }
 }
 
@@ -270,6 +289,12 @@
 @media screen and (max-width:1182px){
     #MainBlogTittle{
         font-size:6rem;
+    }
+}
+
+@media screen and (max-width:1077px){
+    #StayLoopBlogDescr{
+        max-width:80%;
     }
 }
 
@@ -311,6 +336,12 @@
     }
 }
 
+@media screen and (max-width:913px){
+    #StayLoopBlogDescr{
+        max-width:95%;
+    }
+}
+
 @media screen and (max-width:900px){
     #MainBlogTittle{
         font-size:4rem;
@@ -334,9 +365,25 @@
     }
 }
 
+@media screen and (max-width:981px){
+    #StayLoopBlogDescr{
+        max-width:100%;
+    }
+}
+
 @media screen and (max-width:767px){
     .ImageWrapperEachBlog{
         height: 75%;
+    }
+}
+
+@media screen and (max-width:746px){
+
+    #StayLoopBlogDescr{
+        font-size:1.2rem;
+    }
+    .SubscribeInBlogDiv{
+        margin-top: 1.6rem;
     }
 }
 
@@ -344,6 +391,21 @@
     #MainBlogTittle{
         font-size:3rem;
     }
+}
+
+@media screen and (max-width:595px){
+    .SmallPartAtBlogDiv{
+        width: 100%;
+        padding:3rem 1rem 3rem 1rem;
+    }
+    #StayLoopBlogTittle{
+        font-size:1.5rem;
+    }
+    
+    #StayLoopBlogDescr{
+        font-size:1.1rem;
+    }
+    
 }
 
 @media screen and (max-width:544px){
@@ -392,6 +454,38 @@
     }
     .ImageWrapperEachBlog{
         height: 75%;
+    }
+}
+
+@media screen and (max-width:515px){
+    .SmallPartAtBlogDiv{
+        width: 90%;
+        flex-direction:column;
+        justify-content: space-between;
+        padding:3rem 1.5rem 3rem 1.5rem;
+        row-gap: 2rem;
+    }
+    .SubscribeMarginDiv{
+        width:100%;
+    }
+    
+    
+    .SubscribeImageWrapper{
+        height: 10rem;
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width:442px){
+    #StayLoopBlogDescr{
+        font-size:1rem;
+    }
+    .SubscribeInBlogDiv{
+        width: 100%;
+    }
+    .SubscribeInBlogDiv button{
+        font-size: 0.8rem;
     }
 }
 
