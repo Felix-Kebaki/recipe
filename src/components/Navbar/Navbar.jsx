@@ -130,7 +130,7 @@ export function Navbar({ opened, setOpened }) {
                 <NavLink
                   onClick={HandleClickOfLink}
                   className="NavFamily"
-                  to="/recipe/"
+                  to="/recipe/home"
                   activeclassname="active"
                 >
                   Home
