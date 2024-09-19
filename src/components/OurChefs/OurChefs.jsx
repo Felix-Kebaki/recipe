@@ -72,10 +72,6 @@ export function OurChefs() {
             ))}
             </div>
         </div>
-        <div className="ArrowsOfChefsDiv">
-          <FontAwesomeIcon icon={faChevronLeft} id="ChefsArrowIcons" onClick={HandleBackwardClick}/>
-          <FontAwesomeIcon icon={faChevronRight} id="ChefsArrowIcons" onClick={HandleForwardClick}/>
-        </div>
       </div>
     </section>
   );

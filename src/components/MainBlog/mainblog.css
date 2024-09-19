@@ -195,11 +195,34 @@
 }
 
 .ButtonDateDiv button{
-    padding: 0.4rem 1rem;
-    border:none;
+    padding: 0.4rem 1.5rem;
+    border:0.1rem #6565d1 solid ;
+    color:white;
     cursor:pointer;
-    background:#6565d1;
+    background:transparent;
     font-size: 0.9rem;
+    position:relative;
+    z-index:1;
+}
+
+.ButtonDateDiv button:hover{
+    color:black;
+}
+
+.ButtonDateDiv button::after{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    background-color: #6565d1;
+    z-index:-1;
+    transition:all 0.1s ease-in-out;
+}
+
+.ButtonDateDiv button:hover::after{
+    transform:scale(1,0);
 }
 
 .DotDateDiv{

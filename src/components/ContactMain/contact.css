@@ -1,7 +1,7 @@
 .ContactMainSec{
     width:100%;
     background:rgba(172, 172, 172, 0.575);
-    padding:9rem 0rem 0rem 0rem;
+    padding:8rem 0rem 4rem 0rem;
     min-height: 70dvh;
 }
 
@@ -36,14 +36,14 @@
     row-gap: 4rem;
 }
 
-.ContactFormWrapper form div{
+.ContactFormWrapper form .InputAndInputDiv{
     width:100%;
     display: flex;
     column-gap: 6%;
 }
 
 
-.ContactFormWrapper form div input{
+.InputAndInputDiv input{
     width: 47%;
     outline: none;
     font-size:1.1rem;
@@ -53,8 +53,28 @@
     background: transparent;
 }
 
+.TextAreaAndBtnDiv{
+    position:relative;
+}
 
-.ContactFormWrapper form div button{
+.TextAreaAndBtnDiv textarea{
+    max-width:47%;
+    outline: none;
+    font-size:1.1rem;
+    padding: 0.3rem 0rem 0.2rem 0.3rem;
+    border:none;
+    border-bottom: 0.1rem dashed black;
+    background: transparent;
+}
+
+.TextAreaAndBtnDiv div{
+    position:absolute;
+    top:0;
+    left:53%;
+}
+
+
+.TextAreaAndBtnDiv div button{
     padding: 0.4rem 2rem;
     background: transparent;
     border: 0.1rem solid #6565d1;
@@ -65,7 +85,7 @@
     z-index:1;
 }
 
-.ContactFormWrapper form div button::before{
+.TextAreaAndBtnDiv div button::before{
     content:"";
     position:absolute;
     top: 0;
@@ -77,11 +97,11 @@
     transition: all 0.1s ease-in-out;
 }
 
-.ContactFormWrapper form div button:hover{
+.TextAreaAndBtnDiv div button:hover{
     background:transparent;
 }
 
-.ContactFormWrapper form div button:hover::before{
+.TextAreaAndBtnDiv div button:hover::before{
     transform:scale(1,0) ;
 }
 
@@ -148,8 +168,12 @@
         align-items: start;
     }
     
-    .ContactFormWrapper form div input{
+    .InputAndInputDiv input{
         width: 50%;
+    }
+
+    .TextAreaAndBtnDiv textarea{
+        max-width:50%;
     }
 
     .ConnectMainDiv{

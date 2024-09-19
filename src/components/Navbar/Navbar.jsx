@@ -154,14 +154,6 @@ export function Navbar({ opened, setOpened }) {
                 <NavLink
                   onClick={HandleClickOfLink}
                   className="NavFamily"
-                  to="/shop"
-                  activeclassname="active"
-                >
-                  Shop
-                </NavLink>
-                <NavLink
-                  onClick={HandleClickOfLink}
-                  className="NavFamily"
                   to="/contact"
                   activeclassname="active"
                 >

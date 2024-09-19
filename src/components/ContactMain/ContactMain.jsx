@@ -12,17 +12,19 @@ export function ContactMain() {
         </div>
         <div className="ContactFormWrapper">
           <form>
-            <div>
+            <div className="InputAndInputDiv">
               <input type="text" placeholder="First Name" />
               <input type="text" placeholder="Last Name" />
             </div>
-            <div>
+            <div className="InputAndInputDiv">
               <input type="text" placeholder="Email Address" />
               <input type="text" placeholder="Phone Number" />
             </div>
-            <div>
-              <input type="text" placeholder="Message"/>
+            <div className="TextAreaAndBtnDiv">
+              <textarea type="text" placeholder="Message"/>
+              <div>
              <button type="submit">Submit</button>
+             </div>
             </div>
           </form>
           

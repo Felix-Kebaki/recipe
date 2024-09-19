@@ -106,23 +106,6 @@
 }
 
 
-.ArrowsOfChefsDiv{
-    width: 100%;
-    display: flex;
-    justify-content: end;
-    column-gap: 2rem;
-}
-
-#ChefsArrowIcons{
-    font-size: 2rem;
-    border: 0.1rem solid #6565d1;
-    width: 2rem;
-    height: 2rem;
-    padding: 0.5rem 0.5rem;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
 
 
 @media screen and (max-width:1515px){
@@ -139,15 +122,6 @@
     
     .EachChefDiv:nth-of-type(even){
         height: 32rem; 
-    }
-
-    .ArrowsOfChefsDiv{
-        column-gap: 1.4rem;
-    }
-    
-    #ChefsArrowIcons{
-        width: 1.6rem;
-        height: 1.6rem;
     }
     
     
@@ -228,15 +202,6 @@
     .DisplayOnOurChefSec{
         column-gap: 1rem;
     }
-    .ArrowsOfChefsDiv{
-        column-gap: 1rem;
-    }
-    
-    #ChefsArrowIcons{
-        width: 1.3rem;
-        height: 1.3rem;
-    }
-    
 }
 
 @media screen and (max-width:428px){
