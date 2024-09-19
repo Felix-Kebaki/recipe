@@ -130,7 +130,7 @@ export function Navbar({ opened, setOpened }) {
                 <NavLink
                   onClick={HandleClickOfLink}
                   className="NavFamily"
-                  to="/recipe"
+                  to="/recipe/"
                   activeclassname="active"
                 >
                   Home
@@ -138,7 +138,7 @@ export function Navbar({ opened, setOpened }) {
                 <NavLink
                   onClick={HandleClickOfLink}
                   className="NavFamily"
-                  to="/recipes"
+                  to="/recipe/recipes"
                   activeclassname="active"
                 >
                   Recipes
@@ -146,7 +146,7 @@ export function Navbar({ opened, setOpened }) {
                 <NavLink
                   onClick={HandleClickOfLink}
                   className="NavFamily"
-                  to="/blog"
+                  to="/recipe/blog"
                   activeclassname="active"
                 >
                   Blog
@@ -154,7 +154,7 @@ export function Navbar({ opened, setOpened }) {
                 <NavLink
                   onClick={HandleClickOfLink}
                   className="NavFamily"
-                  to="/contact"
+                  to="/recipe/contact"
                   activeclassname="active"
                 >
                   Contact

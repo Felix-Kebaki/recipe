@@ -13,31 +13,31 @@ import { GlobalContextFunction } from './context/GlobalContext.jsx'
 
 const router=createBrowserRouter([
   {
-    path:"/",
+    path:"/recipe/",
     element:<App/>,
     children:[
       {
-        path:"/recipe",
+        path:"/recipe/",
         element:<Home/>
       },
       {
-        path:"/favourite",
+        path:"/recipe/favourite",
         element:<Favourite/>
       },
       {
-        path:"/recipes",
+        path:"/recipe/recipes",
         element:<Recipes/>
       },
       {
-        path:"/recipes/:id",
+        path:"/recipe/recipes/:id",
         element:<RecipeDetails/>
       },
       {
-        path:"/blog",
+        path:"/recipe/blog",
         element:<Blog/>
       },
       {
-        path:"/contact",
+        path:"/recipe/contact",
         element:<Contact/>
       },
     ]
