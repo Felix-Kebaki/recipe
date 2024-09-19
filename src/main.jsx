@@ -41,7 +41,8 @@ const router=createBrowserRouter([
         element:<Contact/>
       },
     ]
-  }
+  },
+
 ])
 
 createRoot(document.getElementById('root')).render(
