@@ -108,11 +108,28 @@
     border-bottom: black dashed 0.12rem;
 }
 
+.PlaceholderSubscribe{
+    position:absolute;
+    left:0;
+    color:#ddddf1;
+    top:0;
+    margin:0.2rem 0rem 0rem 0.4rem;
+    font-size:0.8rem;
+}
+
+.VisiblePla{
+    display: block;
+}
+
+.InvisiblePla{
+    display:none;
+}
+
 .SubscribeInBlogDiv button{
     position: absolute;
     right: 0;
     font-size: 1rem;
-    color: #ddddf1;
+    color: black;
     border:none;
     background:transparent;
     cursor:pointer;
@@ -448,35 +465,24 @@
         margin: 2rem auto 0rem;
     }
     .BlogDispalyDiv{
-        grid-template-columns: 1fr;
-        grid-template-rows: repeat(22,12rem);
-        grid-template-areas:
-        "EachBlog1 "
-        "EachBlog1 "
-        "EachBlog1 "
-        "EachBlog1 "
-        "EachBlog2 "
-        "EachBlog2 "
-        "EachBlog2 "
-        "EachBlog3 "
-        "EachBlog3 "
-        "EachBlog3 "
-        "EachBlog3 "
-        "EachBlog4 "
-        "EachBlog4 "
-        "EachBlog4 "
-        "EachBlog5 "
-        "EachBlog5"
-        "EachBlog5"
-        "EachBlog5"
-        "EachBlog6"
-        "EachBlog6"
-        "EachBlog6"
-        "EachBlog6"
-        ;
+        display:flex;
+        flex-wrap: wrap;
+        row-gap:3rem;
     }
+
+    .AllBlogPosts{
+        width:100%;
+        height:40rem;
+    }
+
     .ImageWrapperEachBlog{
         height: 75%;
+        width: 100%;
+    }
+
+    #BlogEachPic{
+        width:100%;
+        height:100%;
     }
 }
 

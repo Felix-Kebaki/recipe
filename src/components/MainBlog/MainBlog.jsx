@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./mainblog.css";
 import MainBlogImg from "../../assets/images/BlogMain.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -14,6 +14,13 @@ import Blog6 from '../../assets/images/glomourBlog.png'
 
 
 export function MainBlog() {
+
+  const [place,setPlace]=useState(true)
+
+  const HandlePlaceholder=()=>{
+    setPlace(false)
+  }
+
   return (
     <section className="MainBlogMainSec">
       <div className="MainBlogMainDiv">
@@ -21,7 +28,7 @@ export function MainBlog() {
         <div className="BlogMainImageWrapper">
           <img src={MainBlogImg} alt="" />
           <div className="BlogTopWordOnPicDiv">
-            <p>Stay Informed and <br/>make you family happy</p>
+            <p>Stay Informed and <br/>make your family happy</p>
           </div>
         </div>
         <p className="WelcomingBlogPage">Welcome to our blog, where we explore culinary tips, recipe inspiration, and cooking techniques. Discover expert advice, seasonal ingredient highlights, and creative ways to elevate your meals. Whether you’re a beginner or seasoned cook, our blog will inspire your next delicious dish.</p>
@@ -30,8 +37,9 @@ export function MainBlog() {
             <p id="StayLoopBlogTittle">Stay in the loop</p>
             <p id="StayLoopBlogDescr">Subscribe to our newsletter to get latest insight on food recipes straight to your inbox.</p>
             <div className="SubscribeInBlogDiv">
-              <input type="text" placeholder="Email Address..."/>
+              <input type="text" onClick={HandlePlaceholder}/>
               <button>subscribe</button>
+              <p className={place?"PlaceholderSubscribe VisiblePla":"PlaceholderSubscribe InvisiblePla"}>Email Address...</p>
             </div>
           </div>
           <div className="SubscribeImageWrapper">
@@ -39,7 +47,7 @@ export function MainBlog() {
           </div>
         </div>
         <div className="BlogDispalyDiv">
-          <div className="EachBlog1">
+          <div className="EachBlog1 AllBlogPosts">
             <div className="ImageWrapperEachBlog">
               <img src={Blog1} id="BlogEachPic" />
             </div>
@@ -57,7 +65,7 @@ export function MainBlog() {
               </div>
             </div>
           </div>
-          <div className="EachBlog2">
+          <div className="EachBlog2 AllBlogPosts">
             <div className="ImageWrapperEachBlog">
               <img src={Blog2} id="BlogEachPic" />
             </div>
@@ -74,7 +82,7 @@ export function MainBlog() {
               </div>
             </div>
           </div>
-          <div className="EachBlog3">
+          <div className="EachBlog3 AllBlogPosts">
             <div className="ImageWrapperEachBlog">
               <img src={Blog3} id="BlogEachPic" />
             </div>
@@ -91,7 +99,7 @@ export function MainBlog() {
               </div>
             </div>
           </div>
-          <div className="EachBlog4">
+          <div className="EachBlog4 AllBlogPosts">
             <div className="ImageWrapperEachBlog">
               <img src={Blog4} id="BlogEachPic" />
             </div>
@@ -106,7 +114,7 @@ export function MainBlog() {
               </div>
             </div>
           </div>
-          <div className="EachBlog5">
+          <div className="EachBlog5 AllBlogPosts">
             <div className="ImageWrapperEachBlog">
               <img src={Blog5} id="BlogEachPic" />
             </div>
@@ -122,7 +130,7 @@ export function MainBlog() {
               </div>
             </div>
           </div>
-          <div className="EachBlog6">
+          <div className="EachBlog6 AllBlogPosts">
             <div className="ImageWrapperEachBlog">
               <img src={Blog6} id="BlogEachPic" />
             </div>
