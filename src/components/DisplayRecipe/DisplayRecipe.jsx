@@ -53,7 +53,7 @@ export function DisplayRecipe() {
         <div className="DisplayRecipeMainDiv">
       {recipe &&
         recipe.map((each) => (
-          <Link to={"/recipes/"+each.idMeal} className="DisplayEachRecipe" key={each.idMeal}>
+          <Link to={"/recipe/recipes/"+each.idMeal} className="DisplayEachRecipe" key={each.idMeal}>
             <div className="EachRecipeImageDiv">
               <img
                 src={each.strMealThumb}

@@ -162,7 +162,7 @@ export function Navbar({ opened, setOpened }) {
               </div>
               <div className="SearchMenuDivWrapper">
                 <div>
-                  <Link to="/favourite"><FontAwesomeIcon icon={faHeart} id="FavouriteIcon" onClick={HandleClickIconsOnNav}/></Link>
+                  <Link to="/recipe/favourite"><FontAwesomeIcon icon={faHeart} id="FavouriteIcon" onClick={HandleClickIconsOnNav}/></Link>
                   <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" onClick={HandleClickIconsOnNav}/>
                   <FontAwesomeIcon icon={faUser} id="UserIcon" onClick={HandleClickIconsOnNav}/>
                 </div>
@@ -181,7 +181,7 @@ export function Navbar({ opened, setOpened }) {
                   <div className="SuggestionDiv">
                     {ifSearching
                       ? recipe &&
-                        recipe.map((suggest) => <Link to={"/recipes"} key={suggest.idMeal} onClick={()=>HandleSuggestionLink(suggest.strMeal)}>{suggest.strMeal}</Link>)
+                        recipe.map((suggest) => <Link to={"/recipe/recipes"} key={suggest.idMeal} onClick={()=>HandleSuggestionLink(suggest.strMeal)}>{suggest.strMeal}</Link>)
                       : null}
                   </div>
                 </form>
