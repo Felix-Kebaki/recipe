@@ -5,8 +5,6 @@ import Chef4 from "../assets/images/chef4.jpeg";
 import Chef5 from "../assets/images/chef5.jpeg";
 
 
-import TopBlog1 from "../assets/images/BlogMain.jpeg"
-
 export const ChefsDetails = [
   {
     id: 1,
@@ -85,25 +83,5 @@ export const QAndAnswer=[
 ]
 
 
-export const BlogConstants=[
-  {
-    id:1,
-    image:TopBlog1,
-    title:"Happy Family",
-    description:"Take a look at our recipes and you will stick to us after seeing the smiles on your family faces"
-  },
-  {
-    id:2,
-    image:Chef3,
-    title:"Happy Family",
-    description:"Take a look at our recipes and you will stick to us after seeing the smiles on your family faces"
-  },
-  {
-    id:3,
-    image:Chef5,
-    title:"Happy Family",
-    description:"Take a look at our recipes and you will stick to us after seeing the smiles on your family faces"
-  }
-]
 
 

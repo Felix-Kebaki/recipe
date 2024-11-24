@@ -1,12 +1,10 @@
-import React, { useState } from "react";
+
 import "./mainblog.css";
-import MainBlogImg from "../../assets/images/BlogMain.jpeg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
 import {faEye} from '@fortawesome/free-regular-svg-icons'
 import Blog1 from "../../assets/images/EssentialBlog.png";
 import Blog4 from "../../assets/images/BakingBlog.png";
-import Subcribe from '../../assets/images/subscribe.png'
 import Blog3 from '../../assets/images/MistakeBlog.jpeg'
 import Blog2 from '../../assets/images/HealthyBlog.png'
 import Blog5 from '../../assets/images/coupleDinnerBlog.jpeg'
@@ -15,37 +13,20 @@ import Blog6 from '../../assets/images/glomourBlog.png'
 
 export function MainBlog() {
 
-  const [place,setPlace]=useState(true)
-
-  const HandlePlaceholder=()=>{
-    setPlace(false)
-  }
 
   return (
     <section className="MainBlogMainSec">
       <div className="MainBlogMainDiv">
-        <p id="MainBlogTittle">Delicious Inspirations</p>
-        <div className="BlogMainImageWrapper">
-          <img src={MainBlogImg} alt="" />
-          <div className="BlogTopWordOnPicDiv">
-            <p>Stay Informed and <br/>make your family happy</p>
+        <div className="WelcomingBlogMainDiv">
+          <div className="WelcomingPOnlyDiv">
+            <p>Welcome to our blog</p>
+          </div>
+          <div className="WelcomeMorePDiv">
+            <p>Discover expert advice, whether you’re a <br/>beginner or seasoned cook, our blog will<br/> inspire your next delicious dish.</p>
           </div>
         </div>
-        <p className="WelcomingBlogPage">Welcome to our blog, where we explore culinary tips, recipe inspiration, and cooking techniques. Discover expert advice, seasonal ingredient highlights, and creative ways to elevate your meals. Whether you’re a beginner or seasoned cook, our blog will inspire your next delicious dish.</p>
-        <div className="SmallPartAtBlogDiv">
-          <div className="SubscribeMarginDiv">
-            <p id="StayLoopBlogTittle">Stay in the loop</p>
-            <p id="StayLoopBlogDescr">Subscribe to our newsletter to get latest insight on food recipes straight to your inbox.</p>
-            <div className="SubscribeInBlogDiv">
-              <input type="text" onClick={HandlePlaceholder}/>
-              <button>subscribe</button>
-              <p className={place?"PlaceholderSubscribe VisiblePla":"PlaceholderSubscribe InvisiblePla"}>Email Address...</p>
-            </div>
-          </div>
-          <div className="SubscribeImageWrapper">
-            <img src={Subcribe} alt="" />
-          </div>
-        </div>
+           
+        
         <div className="BlogDispalyDiv">
           <div className="EachBlog1 AllBlogPosts">
             <div className="ImageWrapperEachBlog">

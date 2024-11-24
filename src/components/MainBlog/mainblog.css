@@ -1,580 +1,316 @@
-.MainBlogMainSec{
-    padding: 4rem 0rem 5rem 0rem;
-    background: white;
-    width:100%;
+.MainBlogMainSec {
+  padding: 4rem 0rem 5rem 0rem;
+  background: white;
+  width: 100%;
 }
 
-.MainBlogMainDiv{
-    width: 90%;
-    margin: 0rem auto 0rem;
+.MainBlogMainDiv {
+  width: 90%;
+  margin: 0rem auto 0rem;
 }
 
-#MainBlogTittle{
-    text-align: center;
-    font-size:8rem;
+.WelcomingBlogMainDiv {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 1rem;
 }
 
-.BlogMainImageWrapper{
-    width:100%;
-    height: 36rem;
-    margin-top: 2rem;
-    position:relative;
+.WelcomingPOnlyDiv p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  opacity: 0.7;
 }
 
-
-.BlogMainImageWrapper img{
-    width:100%;
-    margin: 0rem auto 0rem;
-    height: 100%;
-    border-radius:1rem;
-    transition:all 0.5s ease-in-out;
+.WelcomeMorePDiv p {
+  font-size: 1.6rem;
+  font-weight: bolder;
 }
 
-.BlogTopWordOnPicDiv{
-    background: linear-gradient(#6565d1cb,#ddddf1b2);
-    position: absolute;
-    top:0;
-    bottom:0;
-    left:0;
-    right:0;
-    border-radius:1rem;
-    display: flex;
-    justify-content: end;
-    align-items: end;
-}
-
-.BlogTopWordOnPicDiv p{
-    font-size:3.5rem;
-    color:black;
-    margin: 0rem 0.4rem 1.5rem 0rem;
-    font-weight: bolder;
-}
-
-.WelcomingBlogPage{
-    font-size:2rem;
-    max-width:60%;
-    margin-top: 3rem;
-}
-
-.SmallPartAtBlogDiv{
-    width: 90%;
-    margin:4rem auto 0rem;
-    background:#6565d1;
-    display:flex;
-    justify-content: space-between;
-    border-radius:1rem;
-    padding:3rem 1.5rem 3rem 1.5rem;
-}
-
-.SubscribeMarginDiv{
-    width:65%;
-}
-
-
-.SubscribeImageWrapper{
-    height: 10rem;
-    width: 35%;
-}
-
-.SubscribeImageWrapper img{
-    height: 100%;
-    width: 100%;
-}
-
-#StayLoopBlogTittle{
-    font-size:2rem;
-    font-weight: bolder;
-}
-
-#StayLoopBlogDescr{
-    margin:0.4rem 0rem 0.4rem 0rem;
-    font-size:1.3rem;
-    max-width:49%;
-}
-
-.SubscribeInBlogDiv{
-    position: relative;
-    width: 20rem;
-    margin-top: 0.6rem;
-}
-
-.SubscribeInBlogDiv input{
-    width:100%;
-    padding: 0.2rem 0.4rem 0.2rem 0.4rem;
-    background:transparent;
-    outline: none;
-    color: #ddddf1;
-    border: none;
-    border-bottom: black dashed 0.12rem;
-}
-
-.PlaceholderSubscribe{
-    position:absolute;
-    left:0;
-    color:#ddddf1;
-    top:0;
-    margin:0.2rem 0rem 0rem 0.4rem;
-    font-size:0.8rem;
-}
-
-.VisiblePla{
-    display: block;
-}
-
-.InvisiblePla{
-    display:none;
-}
-
-.SubscribeInBlogDiv button{
-    position: absolute;
-    right: 0;
-    font-size: 1rem;
-    color: black;
-    border:none;
-    background:transparent;
-    cursor:pointer;
-}
-
-.BlogDispalyDiv{
-    display: grid;
-    margin-top:5rem;
-    grid-gap:0.7rem;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(7,15rem);
-    grid-template-areas:
+.BlogDispalyDiv {
+  display: grid;
+  margin-top: 2rem;
+  grid-gap: 0.7rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: repeat(7, 15rem);
+  grid-template-areas:
     "EachBlog1 EachBlog2 EachBlog3"
     "EachBlog1 EachBlog2 EachBlog3"
     "EachBlog1 EachBlog2 EachBlog3"
     "EachBlog1 EachBlog5 EachBlog3"
     "EachBlog4 EachBlog5 EachBlog6"
     "EachBlog4 EachBlog5 EachBlog6"
-    "EachBlog4 EachBlog EachBlog6"
-    ;
-    width:100%;
+    "EachBlog4 EachBlog EachBlog6";
+  width: 100%;
 }
 
-.EachBlog1{
-    grid-area: EachBlog1;
+.EachBlog1 {
+  grid-area: EachBlog1;
 }
 
-.EachBlog2{
-    grid-area: EachBlog2;
+.EachBlog2 {
+  grid-area: EachBlog2;
 }
 
-.EachBlog3{
-    grid-area: EachBlog3;
+.EachBlog3 {
+  grid-area: EachBlog3;
 }
 
-.EachBlog4{
-    grid-area: EachBlog4;
+.EachBlog4 {
+  grid-area: EachBlog4;
 }
 
-.EachBlog5{
-    grid-area: EachBlog5;
+.EachBlog5 {
+  grid-area: EachBlog5;
 }
 
-.EachBlog6{
-    grid-area: EachBlog6;
+.EachBlog6 {
+  grid-area: EachBlog6;
 }
 
-.ImageWrapperEachBlog{
-    overflow: hidden;
+.ImageWrapperEachBlog {
+  overflow: hidden;
+  height: 80%;
+}
+
+#BlogEachPic {
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+#BlogEachPic:hover {
+  scale: 1.2;
+}
+
+#BlogLittleTittle {
+  margin-top: 0.5rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+}
+
+#BlogDescription {
+  max-width: 90%;
+  margin-top: 0.5rem;
+}
+
+.ButtonDateDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0.3rem auto 0rem;
+}
+
+.ButtonDateDiv button {
+  padding: 0.4rem 1.5rem;
+  border: 0.1rem #6565d1 solid;
+  color: white;
+  cursor: pointer;
+  background: transparent;
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ButtonDateDiv button:hover {
+  color: black;
+}
+
+.ButtonDateDiv button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #6565d1;
+  z-index: -1;
+  transition: all 0.1s ease-in-out;
+}
+
+.ButtonDateDiv button:hover::after {
+  transform: scale(1, 0);
+}
+
+.DotDateDiv {
+  display: flex;
+  column-gap: 0.3rem;
+  align-items: center;
+}
+
+#BlogCircles {
+  font-size: 0.5rem;
+  color: #6565d1;
+}
+
+@media screen and (max-width: 1515px) {
+  .MainBlogMainDiv {
+    width: 98%;
+  }
+}
+
+@media screen and (max-width: 1193px) {
+  .BlogDispalyDiv {
+    margin-top: 1.5rem;
+  }
+  .ImageWrapperEachBlog {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 1102px) {
+  #BlogLittleTittle {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 1027px) {
+  #BlogLittleTittle {
+    font-size: 1.2rem;
+  }
+  #BlogDescription {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 1011px) {
+  .BlogDispalyDiv {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(11, 15rem);
+    grid-template-areas:
+      "EachBlog1 EachBlog2"
+      "EachBlog1 EachBlog2"
+      "EachBlog1 EachBlog2"
+      "EachBlog1 EachBlog4"
+      "EachBlog3 EachBlog4"
+      "EachBlog3 EachBlog4"
+      "EachBlog3 EachBlog6"
+      "EachBlog5 EachBlog6"
+      "EachBlog5 EachBlog6"
+      "EachBlog5 EachBlog6"
+      "EachBlog5 EachBlog";
+  }
+  .ImageWrapperEachBlog {
     height: 80%;
+  }
 }
 
-#BlogEachPic{
+@media screen and (max-width: 767px) {
+  .WelcomingPOnlyDiv p {
+    font-size: 0.9rem;
+  }
+
+  .WelcomeMorePDiv p {
+    font-size: 1.5rem;
+  }
+
+  .ImageWrapperEachBlog {
+    height: 75%;
+  }
+}
+
+@media screen and (max-width: 695px) {
+  .WelcomingPOnlyDiv p {
+    font-size: 0.8rem;
+  }
+
+  .WelcomeMorePDiv p {
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (max-width: 544px) {
+  .WelcomingBlogMainDiv {
+    flex-direction: column;
+    row-gap: 0.6rem;
+    margin-top: 0.3rem;
+  }
+
+  .WelcomingPOnlyDiv p {
+    font-size: 0.9rem;
+  }
+
+  .WelcomeMorePDiv p {
+    font-size: 1.4rem;
+  }
+
+  .BlogDispalyDiv {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+  }
+
+  .AllBlogPosts {
+    width: 100%;
+    height: 40rem;
+  }
+
+  .ImageWrapperEachBlog {
+    height: 75%;
+    width: 100%;
+  }
+
+  #BlogEachPic {
     width: 100%;
     height: 100%;
-    transition:all 0.5s ease-in-out;
+  }
 }
 
-#BlogEachPic:hover{
-    scale:1.2;
+@media screen and (max-width: 407px) {
+  .WelcomingBlogMainDiv {
+    row-gap: 0.5rem;
+    margin-top: 0.3rem;
+  }
+  .WelcomingPOnlyDiv p {
+    font-size: 0.8rem;
+  }
+
+  .WelcomeMorePDiv p {
+    font-size: 1.3rem;
+  }
 }
 
-#BlogLittleTittle{
-    margin-top:0.5rem;
-    text-transform:uppercase;
-    font-size:1.4rem;
+@media screen and (max-width: 373px) {
+  .WelcomingBlogMainDiv {
+    row-gap: 0.4rem;
+    margin-top: 0rem;
+  }
+  .WelcomeMorePDiv p {
+    font-size: 1.1rem;
+  }
 }
 
-#BlogDescription{
-    max-width:90%;
-    margin-top:0.5rem;
-}
+@media screen and (max-width: 346px) {
+  #BlogLittleTittle {
+    font-size: 1.1rem;
+  }
+  .BlogDispalyDiv {
+    grid-template-rows: repeat(22, 15rem);
+  }
 
-.ButtonDateDiv{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    width:100%;
-    margin:0.3rem auto 0rem;
-}
-
-.ButtonDateDiv button{
-    padding: 0.4rem 1.5rem;
-    border:0.1rem #6565d1 solid ;
-    color:white;
-    cursor:pointer;
-    background:transparent;
+  #BlogDescription {
+    max-width: 100%;
     font-size: 0.9rem;
-    position:relative;
-    z-index:1;
+  }
 }
 
-.ButtonDateDiv button:hover{
-    color:black;
+@media screen and (max-width: 321px) {
+  .WelcomingPOnlyDiv p {
+    font-size: 0.7rem;
+  }
+  .WelcomeMorePDiv p {
+    font-size: 1rem;
+  }
 }
 
-.ButtonDateDiv button::after{
-    content:"";
-    position:absolute;
-    top:0;
-    bottom:0;
-    right:0;
-    left:0;
-    background-color: #6565d1;
-    z-index:-1;
-    transition:all 0.1s ease-in-out;
+@media screen and (max-width: 291px) {
+  .WelcomeMorePDiv p {
+    font-size: 0.9rem;
+  }
 }
 
-.ButtonDateDiv button:hover::after{
-    transform:scale(1,0);
-}
-
-.DotDateDiv{
-    display:flex;
-    column-gap:0.3rem;
-    align-items:center;
-}
-
-#BlogCircles{
-    font-size: 0.5rem;
-    color: #6565d1;
-}
-
-@media screen and (max-width:1570px){
-    #StayLoopBlogDescr{
-        max-width:52%;
-    }
-}
-
-@media screen and (max-width:1515px){
-    .MainBlogMainDiv{
-        width: 98%;
-    }
-}
-
-@media screen and (max-width:1456px){
-    #MainBlogTittle{
-        font-size:7.6rem;
-    }
-}
-
-@media screen and (max-width:1394px){
-    .WelcomingBlogPage{
-        max-width:70%;
-    }
-    
-}
-
-@media screen and (max-width:1366px){
-    #StayLoopBlogDescr{
-        max-width:60%;
-    }
-}
-
-@media screen and (max-width:1320px){
-    #MainBlogTittle{
-        font-size:7rem;
-    }
-    
-    .BlogMainImageWrapper{
-        height: 29rem;
-        margin: 2.5rem auto 0rem;
-        border-radius: 1.7rem;
-    }
-}
-
-@media screen and (max-width:1195px){
-    #StayLoopBlogDescr{
-        max-width:67%;
-    }
-}
-
-@media screen and (max-width:1193px){
-    .BlogDispalyDiv{
-        margin-top:4rem;
-    }
-    .ImageWrapperEachBlog{
-        height: 75%;
-    }
-    .BlogTopWordOnPicDiv p{
-        font-size:3rem;
-        margin: 0rem 0.4rem 0.9rem 0rem;
-    }
-    .WelcomingBlogPage{
-        font-size:1.8rem;
-        max-width:75%;
-        margin-top: 2.7rem;
-    }
-}
-
-@media screen and (max-width:1102px){
-    #BlogLittleTittle{
-        font-size:1.3rem;
-    }
-}
-
-@media screen and (max-width:1182px){
-    #MainBlogTittle{
-        font-size:6rem;
-    }
-}
-
-@media screen and (max-width:1077px){
-    #StayLoopBlogDescr{
-        max-width:80%;
-    }
-}
-
-@media screen and (max-width:1063px){
-    #MainBlogTittle{
-        font-size:5rem;
-    }
-}
-
-@media screen and (max-width:1027px){
-    #BlogLittleTittle{
-        font-size:1.2rem;
-    }
-    #BlogDescription{
-        max-width:100%;
-    }
-    
-}
-@media screen and (max-width:1011px){
-    .BlogDispalyDiv{
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: repeat(11,15rem);
-        grid-template-areas:
-        "EachBlog1 EachBlog2"
-        "EachBlog1 EachBlog2"
-        "EachBlog1 EachBlog2"
-        "EachBlog1 EachBlog4"
-        "EachBlog3 EachBlog4"
-        "EachBlog3 EachBlog4"
-        "EachBlog3 EachBlog6"
-        "EachBlog5 EachBlog6"
-        "EachBlog5 EachBlog6"
-        "EachBlog5 EachBlog6"
-        "EachBlog5 EachBlog"
-        ;
-    }
-    .ImageWrapperEachBlog{
-        height: 80%;
-    }
-}
-
-@media screen and (max-width:913px){
-    #StayLoopBlogDescr{
-        max-width:95%;
-    }
-}
-
-@media screen and (max-width:900px){
-    #MainBlogTittle{
-        font-size:4rem;
-    }
-    .BlogMainImageWrapper{
-        height: 23rem;
-        margin: 2rem auto 0rem;
-        border-radius: 1.7rem;
-    }
-}
-
-@media screen and (max-width:791px){
-    .BlogTopWordOnPicDiv p{
-        font-size:2.3rem;
-        margin: 0rem 0.4rem 0.5rem 0rem;
-    }
-    .WelcomingBlogPage{
-        font-size:1.5rem;
-        max-width:80%;
-        margin-top: 2.4rem;
-    }
-}
-
-@media screen and (max-width:981px){
-    #StayLoopBlogDescr{
-        max-width:100%;
-    }
-}
-
-@media screen and (max-width:767px){
-    .ImageWrapperEachBlog{
-        height: 75%;
-    }
-}
-
-@media screen and (max-width:746px){
-
-    #StayLoopBlogDescr{
-        font-size:1.2rem;
-    }
-    .SubscribeInBlogDiv{
-        margin-top: 1.6rem;
-    }
-}
-
-@media screen and (max-width:709px){
-    #MainBlogTittle{
-        font-size:3rem;
-    }
-}
-
-@media screen and (max-width:595px){
-    .SmallPartAtBlogDiv{
-        width: 100%;
-        padding:3rem 1rem 3rem 1rem;
-    }
-    #StayLoopBlogTittle{
-        font-size:1.5rem;
-    }
-    
-    #StayLoopBlogDescr{
-        font-size:1.1rem;
-    }
-    
-}
-
-@media screen and (max-width:544px){
-    #MainBlogTittle{
-        font-size:2.3rem;
-    }
-    .BlogTopWordOnPicDiv p{
-        font-size:1.6rem;
-    }
-    .WelcomingBlogPage{
-        font-size:1.5rem;
-        max-width:100%;
-    }
-    .BlogMainImageWrapper{
-        height: 18rem;
-        width: 100%;
-        margin: 2rem auto 0rem;
-    }
-    .BlogDispalyDiv{
-        display:flex;
-        flex-wrap: wrap;
-        row-gap:3rem;
-    }
-
-    .AllBlogPosts{
-        width:100%;
-        height:40rem;
-    }
-
-    .ImageWrapperEachBlog{
-        height: 75%;
-        width: 100%;
-    }
-
-    #BlogEachPic{
-        width:100%;
-        height:100%;
-    }
-}
-
-@media screen and (max-width:515px){
-    .SmallPartAtBlogDiv{
-        width: 90%;
-        flex-direction:column;
-        justify-content: space-between;
-        padding:3rem 1.5rem 3rem 1.5rem;
-        row-gap: 2rem;
-    }
-    .SubscribeMarginDiv{
-        width:100%;
-    }
-    
-    
-    .SubscribeImageWrapper{
-        height: 10rem;
-        width: 100%;
-    }
-    
-}
-
-@media screen and (max-width:442px){
-    #StayLoopBlogDescr{
-        font-size:1rem;
-    }
-    .SubscribeInBlogDiv{
-        width: 100%;
-    }
-    .SubscribeInBlogDiv button{
-        font-size: 0.8rem;
-    }
-}
-
-@media screen and (max-width:391px){
-    .BlogTopWordOnPicDiv p{
-        font-size:1.4rem;
-    }
-}
-
-@media screen and (max-width:378px){
-    #MainBlogTittle{
-        font-size:1.7rem;
-    } 
-    .BlogMainImageWrapper{
-        height: 18rem;
-        margin: 1.4rem auto 0rem;
-        border-radius: 1rem;
-    }
-}
-
-@media screen and (max-width:352px){
-    .WelcomingBlogPage{
-        font-size:1.3rem;
-    }
-}
-
-@media screen and (max-width:346px){
-
-    #BlogLittleTittle{
-        font-size:1.1rem;
-    }
-    .BlogDispalyDiv{
-        grid-template-rows: repeat(22,15rem);
-    }
-
-    #BlogDescription{
-        max-width:100%;
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (max-width:290px){
-    .BlogTopWordOnPicDiv p{
-        font-size:1.3rem;
-    }
-}
-
-@media screen and (max-width:274px){
-    #MainBlogTittle{
-        font-size:1.4rem;
-    } 
-    .BlogMainImageWrapper{
-        height: 14rem;
-        margin: 1rem auto 0rem;
-        border-radius: 0.8rem;
-    }
-}
-
-@media screen and (max-width:227px){
-    .BlogTopWordOnPicDiv p{
-        font-size:1.1rem;
-    }
+@media screen and (max-width: 264px) {
+  .WelcomeMorePDiv p {
+    font-size: 0.7rem;
+  }
 }

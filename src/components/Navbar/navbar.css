@@ -301,6 +301,14 @@
     #MainLogoAtNav{
         width: 13rem;
     }
+    
+    .MainNav img{
+        padding-left: 0.1rem;
+    }
+
+    .LinksSearchMenuDivWrapper{
+        padding-right: 0.1rem;
+    }
 }
 
 @media screen and (max-width:669px){
@@ -315,17 +323,9 @@
         width: 100%;
     }
     #MainLogoAtNav{
-        padding-left: 0.3rem;
         width: 12rem;
     }
 
-    .LinksSearchMenuDivWrapper{
-        padding-right: 0rem;
-    }
-
-    .MenuDivWrapper{
-        padding-right: 0.3rem;
-    }
 }
 
 @media screen and (max-width:377px){
