@@ -71,6 +71,7 @@
     color: #6565d1;
 }
 
+
 #ActualTestimonial::after{
     content: '"';
     position:absolute;
