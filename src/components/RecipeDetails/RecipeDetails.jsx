@@ -75,8 +75,8 @@ export function RecipeDetails() {
                   <p id="InstructionTittle">Instructions</p>
                   <p id="AllInstructionsEach">{details.strInstructions}</p>
                   {details.strSource &&
-                  <a href={details.strSource} className="MoreToNewWebsite">
-                  <p id="MoreToNewWebsite" target="_blank">More details</p>
+                  <a href={details.strSource} target="_blank" className="MoreToNewWebsite">
+                  <p id="MoreToNewWebsite">More details</p>
                   <FontAwesomeIcon icon={faUpRightFromSquare} id="MoreIconLinkRecipe"/>
                   </a>}
                   <div className="WrapperTagsInDetails">
