@@ -38,36 +38,36 @@ export function RecipeDetails() {
                   <p id="EachRecipeName">{details.strMeal}</p>
                   <p id="IngredTittleEach">Ingredients</p>
                   <p id="AllIngredientsEach">
-                    {details.strMeasure1 &&
-                      `${details.strMeasure1} ${details.strIngredient1}  `}
-                    {details.strMeasure2 &&
-                      `,${details.strMeasure2} ${details.strIngredient2}  `}
-                    {details.strMeasure3 &&
-                      `,${details.strMeasure3} ${details.strIngredient3}  `}
-                    {details.strMeasure4 &&
-                      `,${details.strMeasure4} ${details.strIngredient4}  `}
-                    {details.strMeasure5 &&
-                      `,${details.strMeasure5} ${details.strIngredient5}  `}
-                    {details.strMeasure6 &&
-                      `,${details.strMeasure6} ${details.strIngredient6}  `}
-                    {details.strMeasure7 &&
-                      `,${details.strMeasure7} ${details.strIngredient7}  `}
-                    {details.strMeasure8 &&
-                      `,${details.strMeasure8} ${details.strIngredient8}  `}
-                    {details.strMeasure9 &&
-                      `,${details.strMeasure9} ${details.strIngredient9}  `}
-                    {details.strMeasure10 &&
-                      `,${details.strMeasure10} ${details.strIngredient10}  `}
-                    {details.strMeasure11 &&
-                      `,${details.strMeasure11} ${details.strIngredient11}  `}
-                    {details.strMeasure12 &&
-                      `,${details.strMeasure12} ${details.strIngredient12}  `}
-                    {details.strMeasure13 &&
-                      `,${details.strMeasure13} ${details.strIngredient13}  `}
-                    {details.strMeasure14 &&
-                      `,${details.strMeasure14} ${details.strIngredient14}  `}
-                    {details.strMeasure15 &&
-                      `,${details.strMeasure15} ${details.strIngredient15}  `}
+                    {details.strMeasure1 && details.strMeasure1 !== " " ?
+                      `${details.strMeasure1} ${details.strIngredient1}  `:null}
+                    {details.strMeasure2 && details.strMeasure2 !== " " ?
+                      `,${details.strMeasure2} ${details.strIngredient2}  `:null}
+                    {details.strMeasure3 && details.strMeasure3 !== " " ?
+                      `,${details.strMeasure3} ${details.strIngredient3}  `:null}
+                    {details.strMeasure4 && details.strMeasure4 !== " " ?
+                      `,${details.strMeasure4} ${details.strIngredient4}  `:null}
+                    {details.strMeasure5 && details.strMeasure5 !== " " ?
+                      `,${details.strMeasure5} ${details.strIngredient5}  `:null}
+                    {details.strMeasure6 && details.strMeasure6 !== " " ?
+                      `,${details.strMeasure6} ${details.strIngredient6}  `:null}
+                    {details.strMeasure7 && details.strMeasure7 !== " " ?
+                      `,${details.strMeasure7} ${details.strIngredient7}  `:null}
+                    {details.strMeasure8 && details.strMeasure8 !== " " ?
+                      `,${details.strMeasure8} ${details.strIngredient8}  `:null}
+                    {details.strMeasure9 && details.strMeasure9 !== " " ?
+                      `,${details.strMeasure9} ${details.strIngredient9}  `:null}
+                    {details.strMeasure10 && details.strMeasure10 !== " " ?
+                      `,${details.strMeasure10} ${details.strIngredient10}  `:null}
+                    {details.strMeasure11 && details.strMeasure11 !== " " ?
+                      `,${details.strMeasure11} ${details.strIngredient11}  `:null}
+                    {details.strMeasure12 && details.strMeasure12 !== " " ?
+                      `,${details.strMeasure12} ${details.strIngredient12}  `:null}
+                    {details.strMeasure13 && details.strMeasure13 !== " " ?
+                      `,${details.strMeasure13} ${details.strIngredient13}  `:null}
+                    {details.strMeasure14 && details.strMeasure14 !== " " ?
+                      `,${details.strMeasure14} ${details.strIngredient14}  `:null}
+                    {details.strMeasure15 && details.strMeasure15 !== " " ?
+                      `,${details.strMeasure15} ${details.strIngredient15}  `:null}
                   </p>
                   <div className="ButtonDivWrapperDetails">
                     <Link id="ShopAtEacDetails">Shop Ingredients</Link>
