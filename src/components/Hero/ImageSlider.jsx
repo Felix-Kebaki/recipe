@@ -25,7 +25,7 @@ export function ImageSlider({
           <img src={HeroData.image} alt="" />
           <p id="SliderTittle">{HeroData.tittle}</p>
           <div className="DotsDivSlider">
-            {heroDataDots.map((each, index) => (
+            {heroDataDots && heroDataDots.map((each, index) => (
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -86,7 +86,7 @@ export function ImageSlider({
           <img src={HeroData.image} alt="" />
           <p id="SliderTittle">{HeroData.tittle}</p>
           <div className="DotsDivSlider">
-            {heroDataDots.map((each, index) => (
+            {heroDataDots && heroDataDots.map((each, index) => (
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -146,7 +146,7 @@ export function ImageSlider({
           <img src={HeroData.image} alt="" />
           <p id="SliderTittle">{HeroData.tittle}</p>
           <div className="DotsDivSlider">
-            {heroDataDots.map((each, index) => (
+            {heroDataDots && heroDataDots.map((each, index) => (
               <FontAwesomeIcon
                 icon={faCircle}
                 className={
@@ -203,7 +203,7 @@ export function ImageSlider({
           <img src={HeroData.image} alt="" />
           <p id="SliderTittle">{HeroData.tittle}</p>
           <div className="DotsDivSlider">
-            {heroDataDots.map((each, index) => (
+            {heroDataDots && heroDataDots.map((each, index) => (
               <FontAwesomeIcon
                 icon={faCircle}
                 className={

@@ -5,11 +5,11 @@ export const GlobalFetchContext = createContext(null);
 export const GlobalContextFunction = ({ children }) => {
   const [searchParams, setSearchParams] = useState("");
   const [inputSearch, setInputSearch] = useState("");
-  const [recipe, setRecipe] = useState("");
+  const [recipe, setRecipe] = useState([]);
   const [loading, setLoading] = useState(false);
   const [ifSearching, setIfSearching] = useState(false);
   const [recipeDetails, setRecipeDetails] = useState("");
-  const [categories, setCategories] = useState("");
+  const [categories, setCategories] = useState([]);
   const [searchCat, setSearchCat] = useState("");
   const [favouriteList, setFavouriteList] = useState([]);
 
@@ -24,7 +24,7 @@ export const GlobalContextFunction = ({ children }) => {
         setRecipe(Fetcheddata.meals);
       }
     } catch (err) {
-      console.log(err.message);
+      console.error(err.message);
     }
   };
 
@@ -40,7 +40,7 @@ export const GlobalContextFunction = ({ children }) => {
       }
       
     } catch (err) {
-      console.log(err.message);
+      console.error(err.message);
     }
   };
 
@@ -57,7 +57,7 @@ export const GlobalContextFunction = ({ children }) => {
         setRecipe(Fetcheddata.meals);
       }
     } catch (err) {
-      console.log(err.message);
+      console.error(err.message);
     }
   };
 
@@ -72,7 +72,7 @@ export const GlobalContextFunction = ({ children }) => {
         setRecipe(Fetcheddata.meals);
       }
     } catch (err) {
-      console.log(err.message);
+      console.error(err.message);
     }
   };
 

@@ -16,7 +16,7 @@ export function Favourite() {
   return (
     <section className="DisplayFavMainSec">
       {favouriteList && favouriteList.length>0?
-        favouriteList.map((each) => (
+        favouriteList && favouriteList.map((each) => (
           <Link to={"/recipes/"+each.idMeal} className="DisplayEachFav" key={each.idMeal}>
             <div className="EachRecipeImageDiv">
               <img
