@@ -13,18 +13,18 @@ export const GlobalContextFunction = ({ children }) => {
   const [searchCat, setSearchCat] = useState("");
   const [favouriteList, setFavouriteList] = useState([]);
 
-  const fetchData = async () => {
+  const fetchAllRecipe = async () => {
     try {
+      setLoading(true)
       const response = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchParams}`
       );
       const Fetcheddata = await response.json();
-
-      if (Fetcheddata && Fetcheddata.meals) {
-        setRecipe(Fetcheddata.meals);
-      }
+      setRecipe(Fetcheddata.meals || [])
     } catch (err) {
       console.error(err.message);
+    }finally{
+      setLoading(false)
     }
   };
 
@@ -34,11 +34,7 @@ export const GlobalContextFunction = ({ children }) => {
         `https://www.themealdb.com/api/json/v1/1/categories.php`
       );
       const Fetcheddata = await response.json();
-      
-      if (Fetcheddata && Fetcheddata.categories) {
-        setCategories(Fetcheddata.categories);
-      }
-      
+      setCategories(Fetcheddata.categories||[])
     } catch (err) {
       console.error(err.message);
     }
@@ -52,32 +48,30 @@ export const GlobalContextFunction = ({ children }) => {
         )}`
       );
       const Fetcheddata = await response.json();
-
-      if (Fetcheddata && Fetcheddata.meals) {
-        setRecipe(Fetcheddata.meals);
-      }
+      setRecipe(Fetcheddata.meals || [])
     } catch (err) {
       console.error(err.message);
     }
   };
 
-  const FetchCatSearch = async () => {
+  const SearchAllRecipeByCategory = async (search) => {
     try {
+      setLoading(true)
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${searchCat}`
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${search}`
       );
       const Fetcheddata = await response.json();
-      
-      if (Fetcheddata && Fetcheddata.meals) {
-        setRecipe(Fetcheddata.meals);
-      }
+      setRecipe(Fetcheddata.meals || [])
+      setSearchCat(search);
     } catch (err) {
       console.error(err.message);
+    }finally{
+      setLoading(false)
     }
   };
 
   const HandleClickOnCategory=(getCategory)=>{
-    setSearchCat(getCategory)
+    SearchAllRecipeByCategory(getCategory)
   }
 
   const HandleInputSearch = (e) => {
@@ -99,22 +93,25 @@ export const GlobalContextFunction = ({ children }) => {
     setFavouriteList(cpyFavourite);
   };
 
+  // useEffect(() => {
+  //   fetchAllRecipe();
+  // }, [searchParams, inputSearch]);
   useEffect(() => {
-    fetchData();
-  }, [searchParams, inputSearch]);
-
-  useEffect(() => {
-    fetchFirstLetter();
-  }, [inputSearch]);
-
-  useEffect(() => {
-    FetchCatSearch();
-  }, [searchCat]);  
-
-  useEffect(() => {
-    fetchCategoryList();
-    FetchCatSearch();
+    fetchAllRecipe();
   }, []);
+
+  // useEffect(() => {
+  //   fetchFirstLetter();
+  // }, [inputSearch]);
+
+  // useEffect(() => {
+  //   SearchAllRecipeByCategory();
+  // }, [searchCat]);  
+
+  // useEffect(() => {
+  //   fetchCategoryList();
+  //   SearchAllRecipeByCategory();
+  // }, []);
 
   return (
     <GlobalFetchContext.Provider
@@ -136,6 +133,7 @@ export const GlobalContextFunction = ({ children }) => {
         categories,
         HandleClickOnCategory,
         searchCat,
+        fetchCategoryList
       }}
     >
       {children}

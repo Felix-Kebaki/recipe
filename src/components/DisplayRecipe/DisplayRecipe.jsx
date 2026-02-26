@@ -15,6 +15,7 @@ export function DisplayRecipe() {
     categories,
     searchCat,
     HandleClickOnCategory,
+    fetchCategoryList
   } = useContext(GlobalFetchContext);
   const [filter, setFilter] = useState(false);
 
@@ -44,7 +45,7 @@ export function DisplayRecipe() {
     <section className="DisplayRecipeMainSec">
       <div className="FilterDivWrapper">
         <ul className="FilterStill">
-          <li className="FilterBtn">
+          <li className="FilterBtn" onClick={fetchCategoryList}>
             Filter <FontAwesomeIcon icon={faAngleDown} />
           </li>
           <div
