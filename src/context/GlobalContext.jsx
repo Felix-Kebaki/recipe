@@ -15,26 +15,26 @@ export const GlobalContextFunction = ({ children }) => {
 
   const fetchAllRecipe = async () => {
     try {
-      setLoading(true)
+      setLoading(true);
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s=${searchParams}`
+        `https://www.themealdb.com/api/json/v1/1/search.php?s`,
       );
       const Fetcheddata = await response.json();
-      setRecipe(Fetcheddata.meals || [])
+      setRecipe(Fetcheddata.meals || []);
     } catch (err) {
       console.error(err.message);
-    }finally{
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
 
   const fetchCategoryList = async () => {
     try {
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/categories.php`
+        `https://www.themealdb.com/api/json/v1/1/categories.php`,
       );
       const Fetcheddata = await response.json();
-      setCategories(Fetcheddata.categories||[])
+      setCategories(Fetcheddata.categories || []);
     } catch (err) {
       console.error(err.message);
     }
@@ -44,11 +44,11 @@ export const GlobalContextFunction = ({ children }) => {
     try {
       const response = await fetch(
         `https://www.themealdb.com/api/json/v1/1/search.php?f=${inputSearch.charAt(
-          0
-        )}`
+          0,
+        )}`,
       );
       const Fetcheddata = await response.json();
-      setRecipe(Fetcheddata.meals || [])
+      setRecipe(Fetcheddata.meals || []);
     } catch (err) {
       console.error(err.message);
     }
@@ -56,23 +56,42 @@ export const GlobalContextFunction = ({ children }) => {
 
   const SearchAllRecipeByCategory = async (search) => {
     try {
-      setLoading(true)
+      setLoading(true);
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${search}`
+        `https://www.themealdb.com/api/json/v1/1/filter.php?c=${search}`,
       );
       const Fetcheddata = await response.json();
-      setRecipe(Fetcheddata.meals || [])
+      setRecipe(Fetcheddata.meals || []);
       setSearchCat(search);
     } catch (err) {
       console.error(err.message);
-    }finally{
-      setLoading(false)
+    } finally {
+      setLoading(false);
     }
   };
 
-  const HandleClickOnCategory=(getCategory)=>{
-    SearchAllRecipeByCategory(getCategory)
-  }
+  const FetchOneRecipe = async (foodName, navigate) => {
+    try {
+      setLoading(true);
+      const response = await fetch(
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=${foodName}`,
+      );
+      const Fetcheddata = await response.json();
+      if (Fetcheddata.meals) {
+        navigate(`/recipe/recipes/${Fetcheddata.meals[0].idMeal}`);
+      } else {
+        console.error("Recipe not available")
+      }
+    } catch (error) {
+      console.error(error.message);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const HandleClickOnCategory = (getCategory) => {
+    SearchAllRecipeByCategory(getCategory);
+  };
 
   const HandleInputSearch = (e) => {
     setInputSearch(e.target.value);
@@ -82,7 +101,7 @@ export const GlobalContextFunction = ({ children }) => {
   const HandleAddToFav = (getFav) => {
     let cpyFavourite = [...favouriteList];
     const index = cpyFavourite.findIndex(
-      (each) => each.idMeal === getFav.idMeal
+      (each) => each.idMeal === getFav.idMeal,
     );
 
     if (index === -1) {
@@ -106,7 +125,7 @@ export const GlobalContextFunction = ({ children }) => {
 
   // useEffect(() => {
   //   SearchAllRecipeByCategory();
-  // }, [searchCat]);  
+  // }, [searchCat]);
 
   // useEffect(() => {
   //   fetchCategoryList();
@@ -133,7 +152,8 @@ export const GlobalContextFunction = ({ children }) => {
         categories,
         HandleClickOnCategory,
         searchCat,
-        fetchCategoryList
+        fetchCategoryList,
+        FetchOneRecipe,
       }}
     >
       {children}

@@ -18,11 +18,13 @@ export function Navbar({ opened, setOpened }) {
   const {
     inputSearch,
     HandleInputSearch,
+    searchParams,
     recipe,
     setInputSearch,
     setSearchParams,
     ifSearching,
-    setIfSearching
+    setIfSearching,
+    FetchOneRecipe,
   } = useContext(GlobalFetchContext);
   const [getScroll, setGetScroll] = useState({
     y: 0,
@@ -30,24 +32,25 @@ export function Navbar({ opened, setOpened }) {
   });
   const navigate = useNavigate();
 
-  const HandleFormSubmission = (e) => {
+  const HandleFormSubmission = async (e) => {
     e.preventDefault();
-    setSearchParams(inputSearch);
+    setIfSearching(false);
+    await FetchOneRecipe(inputSearch, navigate);
     setInputSearch("");
-    setIfSearching(false)
-    navigate("/recipes");
+    const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
+    if (AppearNav) {
+      AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
+    }
+    document.body.style.overflow = "auto";
+    setOpened(false);
+  };
+
+  const HandleClickIconsOnNav = () => {
     const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
     AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
     document.body.style.overflow = "auto";
     setOpened(false);
   };
-
-  const HandleClickIconsOnNav=()=>{
-    const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
-    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
-    document.body.style.overflow = "auto";
-    setOpened(false);
-  }
 
   const HandleClickMenu = () => {
     const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
@@ -70,15 +73,15 @@ export function Navbar({ opened, setOpened }) {
     setOpened(false);
   };
 
-  const HandleSuggestionLink=(ok)=>{
-    setSearchParams(ok)
-    setIfSearching(false)
-    setInputSearch("")
+  const HandleSuggestionLink = (ok) => {
+    setSearchParams(ok);
+    setIfSearching(false);
+    setInputSearch("");
     const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
     AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
     document.body.style.overflow = "auto";
     setOpened(false);
-  }
+  };
 
   const HandleNavOnScroll = () => {
     setGetScroll((prev) => {
@@ -93,7 +96,7 @@ export function Navbar({ opened, setOpened }) {
     if (getScroll.y > 15) {
       if (getScroll.y > getScroll.PrevY) {
         headNav.style.transform = "translateY(-10rem)";
-        setIfSearching(false)
+        setIfSearching(false);
       } else if (getScroll.y < getScroll.PrevY) {
         headNav.style.boxShadow = "0rem 0rem 2rem #6565d1 ";
         headNav.style.background = "white";
@@ -162,9 +165,23 @@ export function Navbar({ opened, setOpened }) {
               </div>
               <div className="SearchMenuDivWrapper">
                 <div>
-                  <Link to="/recipe/favourite"><FontAwesomeIcon icon={faHeart} id="FavouriteIcon" onClick={HandleClickIconsOnNav}/></Link>
-                  <FontAwesomeIcon icon={faBagShopping} id="ShoppingBagIcon" onClick={HandleClickIconsOnNav}/>
-                  <FontAwesomeIcon icon={faUser} id="UserIcon" onClick={HandleClickIconsOnNav}/>
+                  <Link to="/recipe/favourite">
+                    <FontAwesomeIcon
+                      icon={faHeart}
+                      id="FavouriteIcon"
+                      onClick={HandleClickIconsOnNav}
+                    />
+                  </Link>
+                  <FontAwesomeIcon
+                    icon={faBagShopping}
+                    id="ShoppingBagIcon"
+                    onClick={HandleClickIconsOnNav}
+                  />
+                  <FontAwesomeIcon
+                    icon={faUser}
+                    id="UserIcon"
+                    onClick={HandleClickIconsOnNav}
+                  />
                 </div>
                 <form className="SearchForm" onSubmit={HandleFormSubmission}>
                   <input
@@ -181,7 +198,17 @@ export function Navbar({ opened, setOpened }) {
                   <div className="SuggestionDiv">
                     {ifSearching
                       ? recipe &&
-                        recipe.map((suggest) => <Link to={"/recipe/recipes"} key={suggest.idMeal} onClick={()=>HandleSuggestionLink(suggest.strMeal)}>{suggest.strMeal}</Link>)
+                        recipe.map((suggest) => (
+                          <Link
+                            to={"/recipe/recipes"}
+                            key={suggest.idMeal}
+                            onClick={() =>
+                              HandleSuggestionLink(suggest.strMeal)
+                            }
+                          >
+                            {suggest.strMeal}
+                          </Link>
+                        ))
                       : null}
                   </div>
                 </form>
