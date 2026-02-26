@@ -3,7 +3,7 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faBagShopping } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import React, { useEffect, useState, useContext } from "react";
+import { useEffect, useState, useContext } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { Link, NavLink } from "react-router-dom";
@@ -19,7 +19,7 @@ export function Navbar({ opened, setOpened }) {
     inputSearch,
     HandleInputSearch,
     searchParams,
-    recipe,
+    suggestedRecipes,
     setInputSearch,
     setSearchParams,
     ifSearching,
@@ -73,12 +73,14 @@ export function Navbar({ opened, setOpened }) {
     setOpened(false);
   };
 
-  const HandleSuggestionLink = (ok) => {
-    setSearchParams(ok);
+  const HandleSuggestionLink = async (ok) => {
+    await FetchOneRecipe(ok, navigate);
     setIfSearching(false);
     setInputSearch("");
     const AppearNav = document.querySelector(".LinksSearchMenuDivWrapper");
-    AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
+    if (AppearNav) {
+      AppearNav.classList.remove("LinksSearchMenuDivWrapperDisappear");
+    }
     document.body.style.overflow = "auto";
     setOpened(false);
   };
@@ -196,11 +198,10 @@ export function Navbar({ opened, setOpened }) {
                     <FontAwesomeIcon icon={faMagnifyingGlass} />
                   </button>
                   <div className="SuggestionDiv">
-                    {ifSearching
-                      ? recipe &&
-                        recipe.map((suggest) => (
+                    {ifSearching && (suggestedRecipes && suggestedRecipes.length !==0)
+                      ? suggestedRecipes &&
+                        suggestedRecipes.map((suggest) => (
                           <Link
-                            to={"/recipe/recipes"}
                             key={suggest.idMeal}
                             onClick={() =>
                               HandleSuggestionLink(suggest.strMeal)

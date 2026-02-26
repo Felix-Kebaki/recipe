@@ -6,6 +6,7 @@ export const GlobalContextFunction = ({ children }) => {
   const [searchParams, setSearchParams] = useState("");
   const [inputSearch, setInputSearch] = useState("");
   const [recipe, setRecipe] = useState([]);
+  const [suggestedRecipes, setSuggestedRecipes] = useState([]);
   const [loading, setLoading] = useState(false);
   const [ifSearching, setIfSearching] = useState(false);
   const [recipeDetails, setRecipeDetails] = useState("");
@@ -48,7 +49,7 @@ export const GlobalContextFunction = ({ children }) => {
         )}`,
       );
       const Fetcheddata = await response.json();
-      setRecipe(Fetcheddata.meals || []);
+      setSuggestedRecipes(Fetcheddata.meals || []);
     } catch (err) {
       console.error(err.message);
     }
@@ -80,7 +81,7 @@ export const GlobalContextFunction = ({ children }) => {
       if (Fetcheddata.meals) {
         navigate(`/recipe/recipes/${Fetcheddata.meals[0].idMeal}`);
       } else {
-        console.error("Recipe not available")
+        console.error("Recipe not available");
       }
     } catch (error) {
       console.error(error.message);
@@ -112,25 +113,17 @@ export const GlobalContextFunction = ({ children }) => {
     setFavouriteList(cpyFavourite);
   };
 
-  // useEffect(() => {
-  //   fetchAllRecipe();
-  // }, [searchParams, inputSearch]);
   useEffect(() => {
     fetchAllRecipe();
   }, []);
 
-  // useEffect(() => {
-  //   fetchFirstLetter();
-  // }, [inputSearch]);
-
-  // useEffect(() => {
-  //   SearchAllRecipeByCategory();
-  // }, [searchCat]);
-
-  // useEffect(() => {
-  //   fetchCategoryList();
-  //   SearchAllRecipeByCategory();
-  // }, []);
+  useEffect(() => {
+    if (inputSearch.trim().length > 0) {
+      fetchFirstLetter();
+    } else {
+      setSuggestedRecipes([]);
+    }
+  }, [inputSearch]);
 
   return (
     <GlobalFetchContext.Provider
@@ -154,6 +147,7 @@ export const GlobalContextFunction = ({ children }) => {
         searchCat,
         fetchCategoryList,
         FetchOneRecipe,
+        suggestedRecipes,
       }}
     >
       {children}
