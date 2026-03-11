@@ -2,15 +2,28 @@
     width: 90%;
     margin: 5rem auto 5rem;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     flex-wrap: wrap;
     row-gap: 3rem;
+    column-gap:2.14rem;
 }
 
 .DisplayEachFav{
     height: 40rem;
     width: 32%;
     text-decoration: none;
+}
+
+.NoFavouriteMainDiv{
+    width:97%;
+    margin:0rem auto 0rem ;
+    padding:4rem 0rem;
+    display: flex;
+    justify-content: center;
+}
+
+.NoFavouriteMainDiv p{
+    font-size:1.2rem;
 }
 
 @media screen and (max-width:1515px){
@@ -44,6 +57,10 @@
         margin: 3.5rem auto 5rem;
         row-gap: 2rem;
     }
+
+    .NoFavouriteMainDiv p{
+    font-size:1rem;
+}
 }
 
 

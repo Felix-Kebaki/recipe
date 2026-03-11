@@ -38,9 +38,9 @@ export function Favourite() {
             </div>
           </Link>
         )):
-            <section style={{width:"100%",display:"flex",justifyContent:"center",alignItems:"center"}}>
-                <p style={{fontSize:"1.5rem"}}>No favourites</p>
-            </section>
+            <div className='NoFavouriteMainDiv'>
+                <p>No favourites</p>
+            </div>
         }
     </section>
   )

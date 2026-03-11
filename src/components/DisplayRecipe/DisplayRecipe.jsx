@@ -69,8 +69,8 @@ export function DisplayRecipe() {
         </ul>
       </div>
       <div className="DisplayRecipeMainDiv">
-        {recipe
-          ? recipe &&
+        {recipe && recipe.length>0 && Array.isArray(recipe)
+          ?
             recipe.map((each) => (
               <Link
                 to={"/recipe/recipes/" + each.idMeal}
@@ -116,7 +116,9 @@ export function DisplayRecipe() {
                 </div>
               </Link>
             ))
-          : null}
+          : <div className="NoRecipeAvailableMainDiv">
+            <p>No recipe available</p>
+            </div>}
       </div>
     </section>
   );

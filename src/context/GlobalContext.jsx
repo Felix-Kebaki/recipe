@@ -18,7 +18,7 @@ export const GlobalContextFunction = ({ children }) => {
     try {
       setLoading(true);
       const response = await fetch(
-        `https://www.themealdb.com/api/json/v1/1/search.php?s`,
+        `https://www.themealdb.com/api/json/v1/1/search.php?s=`,
       );
       const Fetcheddata = await response.json();
       setRecipe(Fetcheddata.meals || []);
@@ -108,7 +108,7 @@ export const GlobalContextFunction = ({ children }) => {
     if (index === -1) {
       cpyFavourite.push(getFav);
     } else {
-      cpyFavourite.splice(index);
+      cpyFavourite.splice(index,1);
     }
     setFavouriteList(cpyFavourite);
   };

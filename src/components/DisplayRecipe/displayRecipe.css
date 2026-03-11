@@ -150,6 +150,18 @@
     margin-top: 0.2rem;
 }
 
+.NoRecipeAvailableMainDiv{
+    width:97%;
+    margin:0rem auto 0rem;
+    display: flex;
+    justify-content: center;
+    padding:4rem 0rem;
+}
+
+.NoRecipeAvailableMainDiv{
+    font-size:1.2rem;
+}
+
 
 
 @media screen and (max-width:1515px){
@@ -233,6 +245,10 @@
     .EachRecipeImageDiv{
         height: 73%;
     }
+
+    .NoRecipeAvailableMainDiv{
+    font-size:1rem;
+}
 }
 
 @media screen and (max-width:493px){
