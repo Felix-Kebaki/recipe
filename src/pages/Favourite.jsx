@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { GlobalFetchContext } from '../context/GlobalContext'
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -13,11 +13,12 @@ export function Favourite() {
     const HandleClickOfFav=(e)=>{
         e.preventDefault()
       }
+
   return (
     <section className="DisplayFavMainSec">
       {favouriteList && favouriteList.length>0?
         favouriteList && favouriteList.map((each) => (
-          <Link to={"/recipes/"+each.idMeal} className="DisplayEachFav" key={each.idMeal}>
+          <Link to={"/recipe/recipes/"+each.idMeal} className="DisplayEachFav" key={each.idMeal}>
             <div className="EachRecipeImageDiv">
               <img
                 src={each.strMealThumb}

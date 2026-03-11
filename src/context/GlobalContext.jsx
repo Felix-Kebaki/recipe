@@ -12,7 +12,10 @@ export const GlobalContextFunction = ({ children }) => {
   const [recipeDetails, setRecipeDetails] = useState("");
   const [categories, setCategories] = useState([]);
   const [searchCat, setSearchCat] = useState("");
-  const [favouriteList, setFavouriteList] = useState([]);
+  const [favouriteList, setFavouriteList] = useState(()=>{
+    const savedFav=localStorage.getItem("favouriteMeals")
+    return savedFav? JSON.parse(savedFav):[]
+  });
 
   const fetchAllRecipe = async () => {
     try {
@@ -110,6 +113,7 @@ export const GlobalContextFunction = ({ children }) => {
     } else {
       cpyFavourite.splice(index,1);
     }
+
     setFavouriteList(cpyFavourite);
   };
 
@@ -124,6 +128,10 @@ export const GlobalContextFunction = ({ children }) => {
       setSuggestedRecipes([]);
     }
   }, [inputSearch]);
+
+  useEffect(() => {
+  localStorage.setItem("favouriteMeals", JSON.stringify(favouriteList));
+}, [favouriteList]);
 
   return (
     <GlobalFetchContext.Provider
