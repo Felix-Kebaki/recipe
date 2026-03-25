@@ -54,7 +54,7 @@
 
 @media screen and (max-width:553px){
     .DisplayFavMainSec{
-         margin: 4.5rem auto 4rem;
+         margin: 5.5rem auto 4rem;
         row-gap: 1rem;
     }
 
@@ -75,4 +75,10 @@
     .DisplayEachFav{
         height: 35rem;
     }
+}
+@media screen and (max-width:377px){
+       .DisplayFavMainSec{
+         margin: 4rem auto 4rem;
+        row-gap: 0.5rem;
+    } 
 }
