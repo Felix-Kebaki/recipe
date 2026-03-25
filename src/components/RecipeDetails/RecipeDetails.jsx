@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./recipeDetails.css";
 import { Link, useParams } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,9 +8,11 @@ import { GlobalFetchContext } from "../../context/GlobalContext";
 
 export function RecipeDetails() {
   const { setRecipeDetails, recipeDetails } = useContext(GlobalFetchContext);
+  const [loading,setLoading]=useState(false)
   const param = useParams();
   
   async function getDetails() {
+    setLoading(true)
     const response = await fetch(
       `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${param.id}`
     );
@@ -18,6 +20,7 @@ export function RecipeDetails() {
 
     if (data && data.meals) {
       setRecipeDetails(data.meals);
+      setLoading(false)
     }
     
   }
@@ -25,6 +28,15 @@ export function RecipeDetails() {
   useEffect(() => {
     getDetails();
   }, []);
+
+  if(loading){
+    return(
+      <div className="LoadingMainDiv">
+        <p>Loading...</p>
+      </div>
+    )
+  }
+
   return (
     <section className="RecipeDetailsMainSec">
       {recipeDetails &&
